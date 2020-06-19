@@ -1,0 +1,26 @@
+body {
+  background-color: #B2EEF3;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5vw;
+  text-align: center;
+}
+/* unvisited link */
+a:link {
+  color: darkblue;
+}
+
+/* visited link */
+a:visited {
+  color: violet;
+}
+
+/* mouse over link */
+a:hover {
+  background-color: grey;
+  font-size: 1.6vw;
+}
+
+/* selected link */
+a:active {
+  font-weight: bold;
+}

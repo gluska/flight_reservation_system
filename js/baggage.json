@@ -1,0 +1,11 @@
+[
+    {"jet": "Bom","bagQuan": "1", "price": "40.00"},
+    {"jet": "Bom","bagQuan": "2", "price": "160.00"},
+    {"jet": "Bom","bagQuan": "3", "price": "355.00"},
+    {"jet": "B737","bagQuan": "1", "price": "54.00"},
+    {"jet": "B737","bagQuan": "2", "price": "264.00"},
+    {"jet": "B737","bagQuan": "3", "price": "474.00"},
+    {"jet": "B757","bagQuan": "1", "price": "64.00"},
+    {"jet": "B757","bagQuan": "2", "price": "306.00"},
+    {"jet": "B757","bagQuan": "3", "price": "518.00"}
+]

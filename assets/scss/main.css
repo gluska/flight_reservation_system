@@ -1,0 +1,417 @@
+@charset "UTF-8";
+/* ================= main settings  ======================================= */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+body {
+  background-image: url("./../images/sky_background_header.jpg");
+  background-repeat: no-repeat;
+  font-family: "Roboto";
+  font-size: 0.9vw;
+}
+
+button {
+  font-weight: bold;
+  font-size: 0.4vw;
+
+}
+
+/* ----------------------- */
+.btn1 {
+  background: #888888;
+  border: 1px solid #767676;
+  box-shadow: 0px 2px 0 #737373, 2px 4px 6px #7b7b7b;
+  font-weight: 900;
+  font-size: 0.7vw;
+  word-wrap: normal;
+  width: 8vw;
+  height: 3vh;
+  letter-spacing: 1px;
+  transition: all 150ms linear;
+  margin-top: 0.1vw;
+}
+
+.btn1:hover {
+  background: #7c7c7c;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+  color: #aeaeae;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 #686868;
+  transition: all 250ms linear;
+}
+
+
+
+.layout {
+  display: grid;
+  /*   wirtualnie 3 kolumny  */
+  grid-template-columns: 15% 65% 20%;
+  /*   wirtualnie 3 wiersze: 15% wysokości viewportu, 72% wysokości viewportu, 10% wysokości viewportu  */
+  grid-template-rows: 15vh 81vh 4vh;
+  /* grid-gap: 2px; */
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  min-width: 300px;
+  width: 100%;
+}
+/* ==========  header left side ========================= */
+.header-l {
+  grid-row: 1;
+  grid-column: 1 / span 1;
+  /* grid-column-start:1;
+      grid-column-end:2; */
+  overflow: hidden;
+  /* background-image: url("./../images/sky_background_header.jpg"); 
+      background-repeat: no-repeat; */
+  border-bottom: 0.5vh solid darkblue;
+}
+
+.header-l img {
+  margin-top: 0.8vh;
+}
+/* ==========  header center ========================= */
+.header-c {
+  grid-row: 1;
+  grid-column: 2/ span 1;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 2vh;
+  font-size: 3.5vh;
+  /* font-family: 'Roboto', sans-serif; */
+  display: inline;
+  border-bottom: 0.5vh solid darkblue;
+}
+/* ==========  header right side ========================= */
+.header-r {
+  grid-row: 1;
+  grid-column: 3/ span 1;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 3px;
+  padding-left: 1vw;
+  float: right;
+  vertical-align: top;
+  border-bottom: 0.5vh solid darkblue;
+}
+
+.header-r p {
+  display: inline-block;
+}
+.counter{
+  font-size: 1.2vh;
+}
+#comInvitation {
+  /* font-size: 1vw; */
+  color: darkblue;
+  font-weight: bold;
+}
+/* ==========  content ========================= */
+#content {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.2em;
+  /* overflow: hidden; */
+  display: flex;
+  flex-wrap: wrap;
+  height: 2.5vh;
+  /* background-color: grey; */
+}
+
+
+/* ======================  inputs ===================================================== */
+#depDate, #lab_depDate, #lab_dest, #labelNumPas, #inputPas, #inputBag_lab,#inputBag {
+  margin-left: 1vw;
+}
+label, form {
+  z-index: 1;
+}
+/* --- miejsca wylotu i destynacja --- */
+select {
+  width: auto;
+  font-size: 0.8vw;
+  font-weight: bold;
+  margin-left: 0.2vw;
+  /* background-color: teal; */
+}
+/* --- data wylotu , ilość pasażerów ---- */
+input {
+  margin-left: 1vw;
+  /* z-index: 1; */
+  font-size: 0.8vw;
+  /* padding: 0.2vw; */
+  height: 1vw;
+  width: auto;
+  font-weight: bold;
+  /* background-color: tomato; */
+}
+ #pasDisplay{
+  width: 2vw;
+  height: 1vw;
+  font-size: 0.8vw;
+  font-weight: bold;
+  /* background-color: violet; */
+ }
+ #inputBag {
+  width: 2vw;
+  height: 1vw;
+  font-size: 0.8vw;
+  font-weight: bold;
+ }
+
+
+/* ==========  sidebar ========================= */
+.sidebar {
+  grid-row: 2;
+  grid-column: 3/ span 1;
+  
+  padding-left: 1vw;
+  text-align: left;
+  color: black;
+  word-wrap: normal;
+  font-size: 0.7vw;
+
+  background-color: whitesmoke;
+}
+
+#btnConfirm {
+  margin-top: 0.6vh;
+  width: 70%;
+  margin-left: 15%;
+  padding: 0 1vw;
+  
+}
+#summary{
+  padding-left: 0.1vh;
+  text-align: left;
+}
+#summary p{
+  margin-top: 0.7vh;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+/* Zebra striping */
+#summary tr:nth-of-type(odd) { 
+  background: #eee; 
+  /* background: #B3BAC7; */
+}
+.dataTblR{
+padding-left: 0.5vw;
+}
+.blue{
+  color: blue;
+  font-weight: bold;
+  font-size: 0.9vw;
+}
+.sumPass{
+  font-weight: normal;
+  font-size: 0.65vw;
+  font-style: italic;
+}
+
+#outputTotal {
+  font-weight: bold;
+  font-size: 0.9vw;
+  background: #B3BAC7;
+}
+
+/* ==========  footer ========================= */
+.footer {
+  grid-row: 3;
+  grid-column: 1 /span 3;
+  text-align: center;
+  vertical-align: center;
+  padding-top: 0.5vh;
+  border-top: 0.5vh solid darkblue;
+  /* background: #e6ffff; */
+ 
+}
+/* ================ form passengers ================ */
+
+.pas_window{
+  visibility: hidden;
+  width: 13vw;
+  height: auto;
+  background-color: lightgrey;
+  position: relative;
+  float: right;
+  top: 0.8vw;
+  left: 0px;
+  padding: 0.4vw;
+  z-index: 1;
+  cursor: pointer;
+  font-size: 0.7vw;
+ 
+}
+
+.pas_window select{
+  margin-top: 0.7vh;
+  width: 1.8vw;
+  
+}
+
+
+.pas_window label{
+  float: left;
+}
+#inputPas{
+margin-left: 1vw;
+
+}
+#btnPas{
+  width: 2vw;
+  height: auto;
+  font-size: 1.1vw;
+}
+/* ================ form baggage ================ */
+/* #inputBag{
+  position: absolute;
+  top: 10vw;
+  left: 1vw;
+  float: left;
+} */
+
+/* ========================= form login ======================== */
+.login_window {
+  visibility: hidden;
+  width: 75vw;
+  height: 84vh;
+  background-color: lightgrey;
+  position: absolute;
+  cursor: pointer;
+  font-weight: bold;
+  top: 30px;
+  left: 20px;
+  padding: 30px 0 0 50px;
+  z-index: 1;
+}
+
+.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+.warn{
+color: red;
+}
+
+.hide_form {
+  visibility: hidden;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* -- komunikat na formularzu logowania --- */
+.comm {
+  background-color: transparent;
+  margin-left: 1vw;
+  color: black;
+  border: none;
+}
+
+/* ========================= */
+
+
+@media screen and (max-width: 600px) {
+  body{
+    font-size: 2vw;
+  }
+  .layout {
+    display: grid;
+    /*   wirtualnie 1 kolumna */
+    grid-template-columns: 100%;
+    /*   wirtualnie 4 wiersze: 15% wysokości viewportu, 65% wysokości viewportu, 15% wysokości viewportu, 8% wysokości viewportu   */
+    grid-template-rows: 9vh 68vh auto 4vh;
+    /* grid-template-rows: 9vh auto 15vh 8vh; */
+  }
+  
+  /* ===== header mobile ==================== */
+  .header-l, .header-c, .header-r, .header-r p {
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+  
+    overflow: hidden;
+    padding-top: 0vh;
+    vertical-align: top;
+  }
+  .header-l{
+    display: none;
+  }
+  .header-c{
+    font-size: 2vh;
+  }
+  #counter, #counter_label{
+    display: none;
+    
+  }
+  .btn1{
+    font-size: 2vw;
+    margin-top: 1.5vh;
+    width: auto;
+  }
+  /* ==========  content ========================= */
+  #content {
+    grid-column: 1;
+    grid-row: 2;
+    display: inline;
+    /* display: flex; flex-direction: column; justify-content: center; align-items: center; */
+    }
+  select{
+    width:auto;
+    font-size: 2vw;
+    margin-top: 1vw;
+    size: 2;
+  }
+  #dep_airport{
+    height: 2.2vw;
+  }
+  input {
+    margin-top: 1vw;
+    font-size: 2vw;
+  }
+#numPas {
+  width: 9vw;
+}
+  /* ==========  sidebar ========================= */
+  .sidebar {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 1.7vw;
+    vertical-align: top;
+  }
+  #btnConfirm {
+    margin-top: 1vw;
+    align-content: center;
+  }
+  #outputTotal {
+    font-size: 1.8vw;
+  }
+  /* ==========  footer ========================= */
+  .footer {
+    grid-column: 1;
+    grid-row: 4;
+    
+  }
+
+ } /*koniec mobile */
+ 

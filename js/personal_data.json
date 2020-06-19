@@ -1,0 +1,2 @@
+personal_data = '[{"login" : "marcin_w", "pwd" : "1234", "email" : "marcin_w@gmail.com", "name" : "Marcin", "surname" : "Wolny"}, {"login" : "edyta_g", "pwd" : "1234qwe", "email" : "edyta_g@gmail.com", "name" : "Edyta", "surname" : "Górska"},{"login" : "adam_s", "pwd" : "1234azx", "email" : "adam_s@gmail.com", "name" : "Adam", "surname" : "Sopata"}]';
+

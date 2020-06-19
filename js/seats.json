@@ -1,0 +1,2858 @@
+[
+ {
+   "jet": "Bom",
+   "seat": "A1_S",
+   "price": 920,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A2_S",
+   "price": 920,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A3_S",
+   "price": 920,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A4_S",
+   "price": 920,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C1_S",
+   "price": 920,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C2_S",
+   "price": 920,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C3_S",
+   "price": 920,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D1_S",
+   "price": 920,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D2_S",
+   "price": 920,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D3_S",
+   "price": 920,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A7_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A8_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A9_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A10_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A11_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "B7_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "B8_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "B9_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "B10_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "B11_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C7_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C8_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C9_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C10_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C11_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D7_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D8_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D9_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D10_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D11_S",
+   "price": 650,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A12_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A14_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A15_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A16_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "A17_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "B12_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "B14_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "B15_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "B16_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "B17_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C12_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C14_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C15_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C16_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "C17_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D12_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D14_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D15_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D16_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "Bom",
+   "seat": "D17_S",
+   "price": 450,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A01",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A02",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A03",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A04",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A05",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B01",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B02",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B03",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B04",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B05",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E01",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E02",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E03",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E04",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E05",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F01",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F02",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F03",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F04",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F05",
+   "price": 2641,
+   "free": true,
+   "code": "FC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A08",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "A09",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "A10",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "A11",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "A12",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "A20",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "A21",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "B08",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "B09",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "B10",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "B11",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "B12",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "B20",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "B21",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "C08",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "C09",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "C10",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "C11",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "C12",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "C20",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "C21",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "D07",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "D08",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "D09",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "D10",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "D11",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "D20",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "D21",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "E07",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "E08",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "E09",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "E10",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "E11",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "E20",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "E21",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "F07",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "F08",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "F09",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "F10",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "F11",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "F20",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "F21",
+   "price": 1878,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B737",
+   "seat": "A14",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A15",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B14",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B15",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C14",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C15",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D12",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D14",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D15",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E12",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E14",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E15",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F12",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F14",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F15",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A22",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A23",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A24",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A25",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A26",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A27",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A28",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A29",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A30",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A31",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A32",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A34",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A35",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A36",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A37",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A38",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "A39",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B22",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B23",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B24",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B25",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B26",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B27",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B28",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B29",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B30",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B31",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B32",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B34",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B35",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B36",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B37",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B38",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "B39",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C22",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C23",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C24",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C25",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C26",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C27",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C28",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C29",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C30",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C31",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C32",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C34",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C35",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C36",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C37",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C38",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "C39",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D22",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D23",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D24",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D25",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D26",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D27",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D28",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D29",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D30",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D31",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D32",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D34",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D35",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D36",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D37",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D38",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "D39",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E22",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E23",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E24",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E25",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E26",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E27",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E28",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E29",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E30",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E31",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E32",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E34",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E35",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E36",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E37",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E38",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "E39",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F22",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F23",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F24",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F25",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F26",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F27",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F28",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F29",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F30",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F31",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F32",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F34",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F35",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F36",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F37",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F38",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B737",
+   "seat": "F39",
+   "price": 255,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A01_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A02_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A03_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A04_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B01_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B02_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B03_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B04_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E01_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E02_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E03_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E04_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E01_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E02_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E03_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E04_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F01_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F02_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F03_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F04_B",
+   "price": 5700,
+   "free": true,
+   "code": "BC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A07_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "A08_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "A09_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "A10_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "A11_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "A12_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "A20_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "A21_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "B07_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "B08_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "B09_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "B10_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "B11_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "B12_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "B20_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "B21_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "C07_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "C08_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "C09_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "C10_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "C11_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "C12_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "C20_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "C21_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "D08_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "D09_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "D10_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "D11_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "D12_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "D20_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "D21_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "E08_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "E09_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "E10_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "E11_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "E12_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "E20_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "E21_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "F08_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "F09_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "F10_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "F11_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "F12_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "F20_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "F21_B",
+   "price": 5021,
+   "free": true,
+   "code": "EP"
+ },
+ {
+   "jet": "B757",
+   "seat": "A22_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A23_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A24_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A25_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A26_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A27_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A28_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A29_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A30_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A31_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A32_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A33_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A34_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A35_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A36_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A37_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A38_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A39_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "A40_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B22_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B23_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B24_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B25_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B26_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B27_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B28_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B29_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B30_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B31_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B32_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B33_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B34_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B35_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B36_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B37_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B38_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B39_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "B40_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C22_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C23_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C24_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C25_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C26_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C27_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C28_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C29_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C30_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C31_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C32_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C33_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C34_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C35_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C36_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C37_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C38_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C39_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "C40_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D22_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D23_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D24_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D25_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D26_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D27_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D28_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D29_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D30_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D31_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D32_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D33_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D34_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D35_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D36_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D37_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D38_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D39_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "D40_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E22_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E23_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E24_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E25_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E26_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E27_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E28_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E29_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E30_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E31_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E32_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E33_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E34_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E35_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E36_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E37_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E38_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E39_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "E40_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F22_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F23_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F24_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F25_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F26_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F27_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F28_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F29_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F30_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F31_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F32_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F33_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F34_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F35_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F36_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F37_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F38_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F39_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ },
+ {
+   "jet": "B757",
+   "seat": "F40_B",
+   "price": 4224,
+   "free": true,
+   "code": "EC"
+ }
+]
