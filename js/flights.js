@@ -316,7 +316,7 @@ var bagPrice = 0;
 
 const summary = () =>{
 // fetch("../js/seats.json") ////pobranie danych z pliku json hostowanego lokalnie - ścieżka z punktu widzenia pliku ap.js
-        fetch("../js/baggage.json")
+        fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/baggage.json")
         .then((resp) => resp.json()) // Transform the data into json
         .then(function (data) {
             let inputBagQuan = document.getElementById("inputBag").value;
@@ -327,7 +327,7 @@ const summary = () =>{
             
             });
       
-        fetch("https://raw.githubusercontent.com/gluska/flight_reservation/master/js/seats.json") 
+        fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/seats.json") 
         .then((resp) => resp.json()) // Transform the data into json
         .then((data) =>  {
             jet_prices = data.filter(el => el.jet === selectedJet && arrSeats.includes(el.seat)); //nowa zmienna = wyfiltrowanej tablicy json dot wybranego samolotu i wybranych siedzeń

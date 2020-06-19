@@ -46,3 +46,5 @@ $ cd ../project_folder
 $ npm install
 $ npm node app
 ```
+## Screen from app
+![ScreenFromApp](./../assets/images/project_screen.jpg) 
