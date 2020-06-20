@@ -316,7 +316,9 @@ var bagPrice = 0;
 
 const summary = () =>{
 // fetch("../js/seats.json") ////pobranie danych z pliku json hostowanego lokalnie - ścieżka z punktu widzenia pliku ap.js
-        fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/baggage.json")
+document.getElementById("comm_cart").innerText = "";    
+
+fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/baggage.json")
         .then((resp) => resp.json()) // Transform the data into json
         .then(function (data) {
             let inputBagQuan = document.getElementById("inputBag").value;
@@ -361,7 +363,7 @@ const summary = () =>{
             // };
             
             // console.log(bagPrice);
-            totalPrice = parseInt(adt_pas) * standardPrice+parseInt(teen_pas)*teensPrice+parseInt(kid_pas)*kidPrice+parseInt(inf_pas)*infPrice+parseInt(bagPrice) * inputBagQuan ;
+            totalPrice = parseInt(adt_pas) * standardPrice+parseInt(teen_pas)*teensPrice+parseInt(kid_pas)*kidPrice+parseInt(inf_pas)*infPrice+parseInt(bagPrice);
             totalPriceFix = totalPrice.toFixed(2); //zaokrąglenie do 2 miejsc
 
 
@@ -498,9 +500,65 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
 
 });
 
+// =====================  tymczasowy koszyk zakupów =============
+// 
 
+var getShoppingCart = () => {
+    fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/baggage.json")
+    .then((resp) => resp.json()) // Transform the data into json
+    .then(function (data) {
+        let inputBagQuan = document.getElementById("inputBag").value;
+        console.log(inputBagQuan);
+        bag_prices = data.filter(el => el.jet === selectedJet && el.bagQuan === inputBagQuan); //nowa zmienna = wyfiltrowanej tablicy json dot wybranego samolotu i wybranych siedzeń
+        bagPrice = (inputBagQuan == "0") ? "0.00" : bag_prices[0].price;
+        
+        
+        });
+    
+    fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/seats.json") 
+    .then((resp) => resp.json()) // Transform the data into json
+    .then((data) =>  {
+        jet_prices = data.filter(el => el.jet === selectedJet && arrSeats.includes(el.seat)); //nowa zmienna = wyfiltrowanej tablicy json dot wybranego samolotu i wybranych siedzeń
+        tarif = jet_prices[0].code;
+        if(tarif == "BC"){tarif_desc = "Business Class" }
+        else if(tarif == "FC"){tarif_desc = "First Class" }
+        else if(tarif == "EC"){tarif_desc = "Economy Class" }
+        else if(tarif == "EP"){tarif_desc = "Economy Plus" };
 
+        standardPrice = jet_prices[0].price;
+        teensPrice = standardPrice * 0.8;
+        kidPrice = standardPrice * 0.5;
 
+        totalPrice = 0;
+        let res_seat_output = arrSeats.join([separator = ', ']);
+        let numTickets = arrSeats.length;
+        let adt_pas = document.getElementById('adt_pas').value;
+        let teen_pas = document.getElementById('teen_pas').value;
+        let kid_pas = document.getElementById('kid_pas').value;
+        let inf_pas = document.getElementById('inf_pas').value;
+        let visAdt = document.getElementById('sumAdt');
+        let visTeens = document.getElementById('sumTeens');
+        let visKid = document.getElementById('sumKid');
+        let visInf = document.getElementById('sumInf');
+        let inputBagQuan = document.getElementById("inputBag").value;
+        console.log("OK")
+        totalPrice = parseInt(adt_pas) * standardPrice+parseInt(teen_pas)*teensPrice+parseInt(kid_pas)*kidPrice+parseInt(inf_pas)*infPrice+parseInt(bagPrice);
+        console.log(totalPrice);
+        totalPriceFix = totalPrice.toFixed(2); //zaokrąglenie do 2 miejsc
+        document.getElementById("comm_cart").innerText = "";
+        document.getElementById("comm_cart").innerText = `Aktualna wartość koszyka: ${totalPriceFix} PLN`;
+        });
+    };
 
+    var list_tarif = document.querySelectorAll('.freeFC_BOM,.freeEP_BOM,.freeE_BOM, .freeEP,.freeFC,.btn_economy,.freeBC_757,.freeEP_757,.btn_economy_757');
+    
+    for(var i=0;i<list_tarif.length;i++){
+        list_tarif[i].addEventListener("click", function() {
+            console.log("kliknieto");
+            getShoppingCart();
+        });
+    };
 
-
+    document.getElementById("inputBag").addEventListener("change", function() {
+        getShoppingCart();
+    });

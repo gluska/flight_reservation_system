@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Grzegorz Łuska">
   <title>System rezerwacji lotów</title>
-  <!-- ostatni plik css jest ważniejszy od wcześniejszych -->
   <link rel="stylesheet" type="text/css" href="./../assets/scss/logout.css">
   <link rel="stylesheet" type="text/css" href="./../assets/scss/airplanes.css">
   <link rel="stylesheet" type="text/css" href="./../assets/scss/main.css">
@@ -54,7 +53,7 @@
   <option value="JFK">Nowy Jork(JFK)</option>
  </select>
  </label>
-{{!-- ---------- wybór daty wylotu --------------- --}}
+{{!-- ---------- choosing date of departure --------------- --}}
 <form>
   <label for="depDate" id="lab_depDate">Data wylotu:
     <input type="date" name="depDate" id="depDate" required>
@@ -156,7 +155,7 @@
     <p id="commPas"></p>
   </div>
 </div>
-{{!-- --- wybór bagażu  --}}
+{{!-- --- baggage choice  --}}
  
 <label for="inputBag" id="inputBag_lab" required>Dodatkowy bagaż:
       <select id="inputBag">
@@ -167,7 +166,7 @@
       </select>
  </label><br>
 
- {{!-- formularz logowania --}}
+ {{!-- login form --}}
  <div class="login_window" id="Popup_form">
   <label for="inputLogin">Podaj login: </label>
   <input type="text" name="inputLogin" id="inputLogin" placeholder="login"><br><br>
@@ -8392,18 +8391,20 @@
   </svg>
 
 </div>
- </div>  <!-- ****koniec contentu*********************************************************** -->
+ </div>  <!-- ****end of content*********************************************************** -->
   
-  <!-- ***************************************************sidebar*********************************************************** -->
+  <!-- ===========================      sidebar      ======================================== -->
 <div id="sidebar" class="sidebar">
+  <div id="comm_cart"></div><br>
   <input type="button" value="Zatwierdz wybór" id="btnConfirm" class="btn1">
   {{!-- <input type="button" value="Reset" id="btnReset" class="btn1"> --}}
   <div id="comm_warning1"></div>
+  
   <summary id="summary" class="hidden" >
 
     <p >Podsumowanie</p>
     <table>
-    <tr class="blue">  {{!-- zakodowany samolot #9992 --}}
+    <tr class="blue">  {{!-- codded plain #9992 --}}
       <td style="text-align: right;font-size: large;">&#9992</td><td id="depDate_conf" class="dataTblR"></td>
     </tr>
     <tr>
@@ -8451,7 +8452,7 @@
 
 
 </div>
-{{!-- ****koniec layoutu******************* --}}
+{{!-- ****end of layout******************* --}}
 
 
 

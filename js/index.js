@@ -1,8 +1,5 @@
 
-
-
-//ustawienie defaults dla kalenadarzy
-
+//set defaults for calendar
 
 var today = new Date();
 var dd = today.getDate();
@@ -29,12 +26,12 @@ var testPW = false;
 var userNameJson = "";
 
 //===========================================================
-function logowanie(){
+const logowanie = () =>{
   //sprawdzenie czy mamy takiego użytkownika zarejestrowanego w bazie
 var inputLogin = document.getElementById("inputLogin").value;
 var inputPW = document.getElementById("inputPW").value;
 console.log(personal_data);
-for (var i = 0; i < Object.keys(personal_data).length; i++) {
+for (let i = 0; i < Object.keys(personal_data).length; i++) {
   if ((personal_data[i].login === inputLogin) && (personal_data[i].pwd === inputPW) ) { //validation = OK
     console.log(`${i} = ${personal_data[i].login} : ${personal_data[i].pwd} `);
     console.log(`${i} = ${inputLogin} : ${inputPW} `);
@@ -73,7 +70,7 @@ for (var i = 0; i < Object.keys(personal_data).length; i++) {
 
 
 //===================================================================================
-function clickLogin(){
+const clickLogin = () => {
   document.getElementById("inputLogin").value = "";
   document.getElementById("inputPW").value = "";
   document.getElementById("Popup_form").classList.toggle("show");//odsłonięcie formularza logowania
@@ -109,7 +106,7 @@ function resetLogOutTime()
         logoutTime = 180000;
 }
 
-function logout() {
+function logout(){
     if(logoutTime>0)
     {
       logoutTime = logoutTime-1000;//schodzimy o 1 sec
