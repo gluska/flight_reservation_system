@@ -33,18 +33,13 @@ const loggingIn = () =>{
     let inputPW = document.getElementById("inputPW").value;
     for (let i = 0; i < Object.keys(personal_data).length; i++) {
       if ((personal_data[i].login === inputLogin) && (personal_data[i].pwd === inputPW) ) { //validation = OK
-        // console.log(`${i} = ${personal_data[i].login} : ${personal_data[i].pwd} `);
-        // console.log(`${i} = ${inputLogin} : ${inputPW} `);
-    
+  
         testLogin +=1; //entered login and password found in the json database
         userNameJson = personal_data[i].name;  //assigning a name read from the json file
         };
       };
     
         if(testLogin===1){//validation ok
-          // console.log(inputLogin);
-          // console.log(inputPW);
-          // console.log(testLogin);
           document.getElementById("comValidation").innerText="Logowanie prawidłowe";
           document.getElementById("comValidation").style.color = "green";
           setTimeout(function(){
@@ -55,9 +50,6 @@ const loggingIn = () =>{
             },1000);
         }
         else {//validation = error
-          // console.log(inputLogin);
-          // console.log(inputPW);
-          // console.log(testLogin);
           document.getElementById("comValidation").innerText="Błędny login lub hasło. Spróbuj ponownie.";
           document.getElementById("comValidation").style.color = "red";
           setTimeout(function(){

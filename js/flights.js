@@ -1,6 +1,6 @@
-import {randomizeNumber} from './functions.js';
+import {reservation, listenToChange, arrSeats, numAdt, numTeens, numKids, numInf, sumPas} from './functions.js';
 
-var arrSeats = [];
+// var arrSeats = [];
 
 var selectedJet; //mapping destinations to an airplane
 document.getElementById("destinations").addEventListener("change", () => {
@@ -10,28 +10,7 @@ else if (choiceDest === "CDG") {selectedJet="B737"}
 else if (choiceDest === "JFK") {selectedJet="B757"} 
 });
 
-// ===============================================================================================
-
-// const reset = () =>{
-//     arrSeats = [];
-//     // console.log("kliknięto");
-//     var arrSel = document.querySelectorAll('.freeFC_BOM,.freeEP_BOM,.freeE_BOM,.freeEP,.freeFC,.btn_economy.freeBC_757,.freeEP_757,.btn_economy_757');
-//     arrSel.forEach((item) => {
-//         if(item.classList.contains("prebook")){console.log(item)};
-//         if(item.classList.contains("prebook")){item.classList.remove("prebook")};
-//     });    
-
-//     return;
-// };
-
-
-// document.getElementById("btnReset").addEventListener("click", () => {
-//     reset();
-// });
-
-// ============================================================================================
-
-//support for destination select
+// ==========================     support for destination select      =====================================================================
 var depTime = "";
 var destTime = "";
 document.getElementById("destinations").addEventListener("change", function() {
@@ -39,124 +18,6 @@ document.getElementById("destinations").addEventListener("change", function() {
     var country = document.getElementById("Bombardier");
     var continental = document.getElementById("B737");
     var interContinental = document.getElementById("B757");
-    
-    const reservationBombardier = () => {
-        arrSeats = []; //reset of selected seats after the plane becomes visible
-        //listening for events for all elements with the class name 'freeFC_BOM' or 'freeEP_BOM' or 'freeE_BOM'
-        //after clicking, it reads the value of the 'id' attribute from the clicked element and adds the id to the array
-        
-        var list = document.querySelectorAll('.freeFC_BOM,.freeEP_BOM,.freeE_BOM');
-    for(var i=0;i<list.length;i++){
-    list[i].addEventListener("click", function() {
-        var numPer = document.getElementById("pasDisplay").value;
-        var seatNum = this.getAttribute('id');
-        var btnChecked = document.getElementById(seatNum);
-        if (!arrSeats.includes(seatNum) && arrSeats.length<numPer && arrSeats.length<9) {
-            arrSeats.push(seatNum);
-            btnChecked.classList.toggle("prebook");
-
-        } 
-        else if (arrSeats.includes(seatNum)) {
-            arrSeats.splice(arrSeats.indexOf(seatNum), 1); //usuwa 1 element począwszy od wskazanego indeksu
-            btnChecked.classList.toggle("prebook");
-        } 
-        else if (arrSeats.length>=numPer){
-            document.getElementById("comm_warning1").innerText=`Maksymalna ilość miejsc do wybrania to ${numPer} ! Zmień ilość pasażerów.`;
-            document.getElementById("comm_warning1").style.color = "red";
-            setTimeout(function(){
-            document.getElementById("comm_warning1").innerText="";
-            }, 2000);
-        }
-        else if (arrSeats.length>=9){
-            document.getElementById("comm_warning1").innerText="Maksymalna ilość miejsc do wybrania to 9! Zmień ilość pasażerów.";
-            document.getElementById("comm_warning1").style.color = "red";
-            setTimeout(function(){
-            document.getElementById("comm_warning1").innerText="";
-            }, 2000);
-        }
-
-        else {console.log("Coś poszło nie tak");}
-    
-        }
-        )};
-    }
-
-
-
-    const reservationBoeing737 = () => {
-        arrSeats = []; //reset of selected seats after the plane becomes visible
-        //listening for events for all elements with the class name 'freeEP' or 'freeFC' or 'btn_economy'
-        //after clicking, it reads the value of the 'id' attribute from the clicked element and adds the id to the array
-       var list = document.querySelectorAll('.freeEP,.freeFC,.btn_economy');
-        for(var i=0;i<list.length;i++){
-        list[i].addEventListener("click", function () {
-            var numPer = document.getElementById("pasDisplay").value;
-            var seatNum = this.getAttribute('id');
-            var btnChecked = document.getElementById(seatNum);
-            
-            if (!arrSeats.includes(seatNum) && arrSeats.length<numPer && arrSeats.length<9) {
-                arrSeats.push(seatNum);
-                btnChecked.classList.toggle("prebook");
-            } 
-            else if (arrSeats.includes(seatNum)) {
-                arrSeats.splice(arrSeats.indexOf(seatNum), 1); //usuwa 1 element począwszy od wskazanego indeksu
-                btnChecked.classList.toggle("prebook");
-            } 
-            else if (arrSeats.length>=numPer){
-                document.getElementById("comm_warning1").innerText=`Maksymalna ilość miejsc do wybrania to ${numPer} ! Zmień ilość pasażerów.`;
-                document.getElementById("comm_warning1").style.color = "red";
-                setTimeout(function(){
-                document.getElementById("comm_warning1").innerText="";
-                }, 2000);
-            }
-            else if (arrSeats.length>=9){
-                document.getElementById("comm_warning1").innerText="Maksymalna ilość miejsc do wybrania to 9! Zmień ilość pasażerów.";
-                document.getElementById("comm_warning1").style.color = "red";
-                setTimeout(function(){
-                document.getElementById("comm_warning1").innerText="";
-                }, 2000);
-            }
-            else {console.log("Coś poszło nie tak");}
-          }
-          )};
-    }
-    const reservationBoeing757 = () => {
-        arrSeats = []; //reset of selected seats after the plane becomes visible
-        //listening for events for all elements with the class name 'freeBC_757' or 'freeEP_757' or 'btn_economy_757'
-        //after clicking, it reads the value of the 'id' attribute from the clicked element and adds the id to the array
-        var list = document.querySelectorAll('.freeBC_757,.freeEP_757,.btn_economy_757');
-        for(var i=0;i<list.length;i++){
-        list[i].addEventListener("click", function() {
-            var numPer = document.getElementById("pasDisplay").value;
-            var seatNum = this.getAttribute('id');
-            var btnChecked = document.getElementById(seatNum);
-            
-            if (!arrSeats.includes(seatNum) && arrSeats.length<numPer && arrSeats.length<9) {
-                arrSeats.push(seatNum);
-                btnChecked.classList.toggle("prebook");
-            } 
-            else if (arrSeats.includes(seatNum)) {
-                arrSeats.splice(arrSeats.indexOf(seatNum), 1); //removes 1 item from the specified index
-                btnChecked.classList.toggle("prebook");
-            } 
-            else if (arrSeats.length>=numPer){
-                document.getElementById("comm_warning1").innerText= `Maksymalna ilość miejsc do wybrania to ${numPer} !`;
-                document.getElementById("comm_warning1").style.color = "red";
-                setTimeout( () => {
-                document.getElementById("comm_warning1").innerText="";
-                }, 2000);
-            }
-            else if (arrSeats.length>=9){
-                document.getElementById("comm_warning1").innerText="Maksymalna ilość miejsc do wybrania to 9! Zmień ilość pasażerów.";
-                document.getElementById("comm_warning1").style.color = "red";
-                setTimeout(function(){
-                document.getElementById("comm_warning1").innerText="";
-                }, 2000);
-            }
-            else {console.log("Coś poszło nie tak");}
-          }
-          )};
-    }
     
 //----flight to Gdansk
     if (choiceDest === "GDN"){
@@ -168,7 +29,7 @@ document.getElementById("destinations").addEventListener("change", function() {
         interContinental.classList.add("hidden");
         depTime = "09:25";
         destTime = "11:10";
-        reservationBombardier();
+        reservation('Bombardier');
     } 
     //----flight to Paris
     else if (choiceDest === "CDG"){
@@ -180,8 +41,7 @@ document.getElementById("destinations").addEventListener("change", function() {
         interContinental.classList.add("hidden");
         depTime = "07:10";
         destTime = "11:15";
-        reservationBoeing737();
-        
+        reservation('B737');
     }
     //----flight to New York
     else if (choiceDest === "JFK"){
@@ -193,91 +53,22 @@ document.getElementById("destinations").addEventListener("change", function() {
         interContinental.classList.add("visible");
         depTime = "05:25";
         destTime = "20:30";
-        reservationBoeing757();
+        reservation('B757');
     }
-
 });
-//========================
-var numAdt = 0;
-var numTeens = 0;
-var numKids = 0;
-var numInf = 0;
-var sumPas = numAdt + numTeens + numKids + numInf;
+//=======================   event listeners =================
 
 document.getElementById("adt_pas").addEventListener("change", ()=> {
- numAdt = parseInt(document.getElementById("adt_pas").value);
- numTeens = parseInt(document.getElementById("teen_pas").value);
- numKids = parseInt(document.getElementById("kid_pas").value);
- numInf = parseInt(document.getElementById("inf_pas").value);
- sumPas = numAdt + numTeens + numKids + numInf;
- document.getElementById("pasDisplay").value= sumPas;
- if(sumPas > 9){
-    document.getElementById("commPas").innerText="Maksymalna ilość pasażerów to 9 osób!";
-    document.getElementById("commPas").style.color = "red";
-    document.getElementById("pasDisplay").style.color = "red";
-    document.getElementById("pasDisplay").style.backgroundColor = "#F08080";
-    } else {
-       document.getElementById("commPas").innerText="";
-       document.getElementById("pasDisplay").style.color = "black";
-       document.getElementById("pasDisplay").style.backgroundColor = "white";
-    }
- 
+        listenToChange();
 })
 document.getElementById("teen_pas").addEventListener("change", ()=> {
-numAdt = parseInt(document.getElementById("adt_pas").value);
-numTeens = parseInt(document.getElementById("teen_pas").value);
-numKids = parseInt(document.getElementById("kid_pas").value);
-numInf = parseInt(document.getElementById("inf_pas").value);
-sumPas = numAdt + numTeens + numKids + numInf;
-document.getElementById("pasDisplay").value= sumPas;
-if(sumPas > 9){
-    document.getElementById("commPas").innerText="Maksymalna ilość pasażerów to 9 osób!";
-    document.getElementById("commPas").style.color = "red";
-    document.getElementById("pasDisplay").style.color = "red";
-    document.getElementById("pasDisplay").style.backgroundColor = "#F08080";
-    } else {
-       document.getElementById("commPas").innerText="";
-       document.getElementById("pasDisplay").style.color = "black";
-       document.getElementById("pasDisplay").style.backgroundColor = "white";
-    }
-
+    listenToChange();
 })
 document.getElementById("kid_pas").addEventListener("change", ()=> {
-numAdt = parseInt(document.getElementById("adt_pas").value);
-numTeens = parseInt(document.getElementById("teen_pas").value);
-numKids = parseInt(document.getElementById("kid_pas").value);
-numInf = parseInt(document.getElementById("inf_pas").value);
-sumPas = numAdt + numTeens + numKids + numInf;
-document.getElementById("pasDisplay").value= sumPas;
-if(sumPas > 9){
-    document.getElementById("commPas").innerText="Maksymalna ilość pasażerów to 9 osób!";
-    document.getElementById("commPas").style.color = "red";
-    document.getElementById("pasDisplay").style.color = "red";
-    document.getElementById("pasDisplay").style.backgroundColor = "#F08080";
-    } else {
-       document.getElementById("commPas").innerText="";
-       document.getElementById("pasDisplay").style.color = "black";
-       document.getElementById("pasDisplay").style.backgroundColor = "white";
-    }
-
+    listenToChange();
 })
 document.getElementById("inf_pas").addEventListener("change", ()=> {
-numAdt = parseInt(document.getElementById("adt_pas").value);
-numTeens = parseInt(document.getElementById("teen_pas").value);
-numKids = parseInt(document.getElementById("kid_pas").value);
-numInf = parseInt(document.getElementById("inf_pas").value);
-sumPas = numAdt + numTeens + numKids + numInf;
-document.getElementById("pasDisplay").value= sumPas;
-if(sumPas > 9){
-    document.getElementById("commPas").innerText="Maksymalna ilość pasażerów to 9 osób!";
-    document.getElementById("commPas").style.color = "red";
-    document.getElementById("pasDisplay").style.color = "red";
-    document.getElementById("pasDisplay").style.backgroundColor = "#F08080";
-    } else {
-       document.getElementById("commPas").innerText="";
-       document.getElementById("pasDisplay").style.color = "black";
-       document.getElementById("pasDisplay").style.backgroundColor = "white";
-    }
+    listenToChange();
 })
 
 
@@ -347,7 +138,6 @@ fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master
             //     totalPrice += parseFloat(jet_prices[i].price); 
             // };
             
-            // console.log(bagPrice);
             totalPrice = parseInt(adt_pas) * standardPrice+parseInt(teen_pas)*teensPrice+parseInt(kid_pas)*kidPrice+parseInt(inf_pas)*infPrice+parseInt(bagPrice);
             totalPriceFix = totalPrice.toFixed(2); //roundeing to 2 decimal places
 
@@ -390,11 +180,6 @@ fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master
 
 
             });
-        
-      
-
-
-
 };
 //=====================    support for button  for summary  generator  ======================================
 document.getElementById("btnConfirm").addEventListener("click", function() {
@@ -547,6 +332,3 @@ var getShoppingCart = () => {
     document.getElementById("inputBag").addEventListener("change", function() {
         getShoppingCart();
     });
-
-    let luckyNumber = randomizeNumber();
-    console.log(luckyNumber);

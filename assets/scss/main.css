@@ -328,10 +328,10 @@ color: red;
   border: none;
 }
 
-/* ========================= */
+/* =======================   max-width: 600px   ================================== */
 
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 376px) and (max-width: 600px) {
   body{
     font-size: 2vw;
   }
@@ -373,25 +373,48 @@ color: red;
   #content {
     grid-column: 1;
     grid-row: 2;
-    display: inline;
-    /* display: flex; flex-direction: column; justify-content: center; align-items: center; */
+    /* display: inline; */
+    display: block;
     }
   select{
-    width:auto;
+    width: auto;
+    height: 3vw;
     font-size: 2vw;
     margin-top: 1vw;
+    margin-left: 1vw;
     size: 2;
   }
-  #dep_airport{
+  /* #dep_airport{
     height: 2.2vw;
-  }
+  } */
   input {
     margin-top: 1vw;
+    height: 3vw;
     font-size: 2vw;
   }
+
+  #inputPas{
+    margin-top: 1vw;
+    width: 3vw;
+    height: 3vw;
+    font-size: 2vw;
+    display: inline;
+  }
+
 #numPas {
   width: 9vw;
+  height: 3vw;
 }
+#btnPas{
+  font-size: 3vw;
+  text-align: center;
+  width: 3vw;
+}
+#inputBag{
+  width: 7vw;
+  height: 3vw;
+  font-size: 2vw;
+  }
   /* ==========  sidebar ========================= */
   .sidebar {
     grid-column: 1;
@@ -413,5 +436,114 @@ color: red;
     
   }
 
- } /*koniec mobile */
+ } 
+ 
+ /* =======================   max-width: 375  ================================== */
+
+
+ @media screen and (max-width: 375px){
+  body{
+    font-size: 2vw;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 9vh 68vh auto 4vh;
+    
+  }
+  
+  /* ===== header mobile ==================== */
+  .header-l, .header-c, .header-r, .header-r p {
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+  
+    overflow: hidden;
+    padding-top: 0vh;
+    vertical-align: top;
+  }
+  .header-l{
+    display: none;
+  }
+  .header-c{
+    font-size: 2vh;
+  }
+  #counter, #counter_label{
+    display: none;
+    
+  }
+  .btn1{
+    font-size: 2vw;
+    margin-top: 1.5vh;
+    width: auto;
+  }
+  /* ==========  content ========================= */
+  #content {
+    grid-column: 1;
+    grid-row: 2;
+    /* display: inline; */
+    display: block;
+    }
+  select{
+    width: auto;
+    height: 3vw;
+    font-size: 2vw;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    size: 2;
+  }
+  /* #dep_airport{
+    height: 2.2vw;
+  } */
+  input {
+    margin-top: 1vw;
+    height: 3vw;
+    font-size: 2vw;
+  }
+
+  #inputPas{
+    margin-top: 1vw;
+    width: 3vw;
+    height: 3vw;
+    font-size: 2vw;
+    display: inline;
+  }
+
+#numPas {
+  width: 9vw;
+  height: 3vw;
+}
+#btnPas{
+  font-size: 3vw;
+  text-align: center;
+  
+}
+#inputBag{
+  width: 7vw;
+  height: 3vw;
+  font-size: 2vw;
+  }
+  /* ==========  sidebar ========================= */
+  .sidebar {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 1.7vw;
+    vertical-align: top;
+  }
+  #btnConfirm {
+    margin-top: 1vw;
+    align-content: center;
+  }
+  #outputTotal {
+    font-size: 1.8vw;
+  }
+  /* ==========  footer ========================= */
+  .footer {
+    grid-column: 1;
+    grid-row: 4;
+    
+  }
+
+ } 
+ /*koniec mobile */
  

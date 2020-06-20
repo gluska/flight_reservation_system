@@ -1630,7 +1630,12 @@
 .st266 {
   fill: #E92227;
 }
-
+.st267{
+  font-size: 2.0vw;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-weight: bold; */
+ fill: #000100;
+}
 /* ===================================================================================== */
 /* ===================== Boeing757  ==================================================== */
 .freeBC_757 {
@@ -2199,7 +2204,7 @@
 .prebook {
   fill: #f074f0;
 }
-
+/* ======================================================================= */
 @media screen and (max-width: 375px) {
   #B737 {
     position: absolute;
@@ -2207,7 +2212,7 @@
     right: 95vw;
     width: 100vw;
     height: 50vh;
-    transform: rotate(90deg) scale(1.55,2.5);
+    transform: rotate(90deg) scale(1.5,2.4);
       }
   #B757 {
     position: absolute;
@@ -2222,35 +2227,37 @@
     position: relative;
     top: -12vh;
     right: 11vw;
-    transform: rotate(90deg) scale(0.65,1.0);
+    transform: rotate(90deg) scale(0.63,1.0);
   }
    
 }
 
-
+/* ======================================================================= */
 @media screen and (min-width: 376px) and (max-width: 600px) {
   #B737 {
     position: absolute;
-    top: 22vh;
-    right: 95vw;
+    top: 62vh;
+    right: 15vw;
     width: 100vw;
     height: 50vh;
-    transform: rotate(90deg) scale(1.55,2.5);
+    /* transform: rotate(90deg) scale(1.5,2.5); */
+    transform: scale(1.5,2.5);
       }
   #B757 {
     position: absolute;
-    top: 28vh;
-    right: 87vw;
+    top: 68vh;
+    right: 15vw;
     width: 100vw;
     height: 80vw;
-    transform: rotate(90deg) scale(1.5,2.5);
+    /* transform: rotate(90deg) scale(1.5,2.5); */
+    transform: scale(1.5,2.5);
     }
   
   #Bombardier {
     position: relative;
-    top: -12vh;
+    top: -4vh;
     right: 11vw;
-    transform: rotate(90deg) scale(0.65,1.0);
+    transform: rotate(90deg) scale(0.74,1.1);
   }
    
 }
