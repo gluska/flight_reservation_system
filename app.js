@@ -5,7 +5,9 @@ const mongo = require('mongodb');
 const favicon = require('serve-favicon');
 const app = express();
 const fetch = require('node-fetch');
-const port = 3000;
+// const port = 3000;
+const port = process.env.PORT || 3000;
+
 const mongoClient = mongo.MongoClient;
 const url = "mongodb+srv://tester_1:xxx111@cluster0-ecz9u.gcp.mongodb.net/test?retryWrites=true&w=majority";
 
