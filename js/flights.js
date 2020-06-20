@@ -255,13 +255,13 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
 
 
     //  lock => force logging in before being able to generate a summary
-    // else if(document.getElementById("comInvitation").textContent === ""){//no successful login
-    //     document.getElementById("comm_warning1").innerText="Najpierw musisz się zalogować!";
-    //     document.getElementById("comm_warning1").style.color = "red";
-    //     setTimeout( () => {
-    //     document.getElementById("comm_warning1").innerText="";
-    //     }, 2000);
-    // } 
+    else if(document.getElementById("comInvitation").textContent === ""){//no successful login
+        document.getElementById("comm_warning1").innerText="Najpierw musisz się zalogować!";
+        document.getElementById("comm_warning1").style.color = "red";
+        setTimeout( () => {
+        document.getElementById("comm_warning1").innerText="";
+        }, 2000);
+    } 
     
     // call for summary generator
     else {getSummary()}

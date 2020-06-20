@@ -5,31 +5,18 @@
   position: absolute;
   top: 50vh;
   width: 70vw;
-   height: 50vh;
+  height: 50vh;
   z-index: 0;
-  transform: scale(1.6,1.6);
-  /* border:solid thick blueviolet; */
+  transform: scale(1.6, 1.6);
 }
 
-#B737 {
-  position: absolute;
-  top: 30vh;
-  /* left: -200px; */
-  max-width: 70vw;
-  width: 70vw;
-  height: 50vh;
-  /* border:solid thick blueviolet; 	 */
-}
-
-#B757 {
+#B737, #B757 {
   position: absolute;
   top: 30vh;
   max-width: 70vw;
   width: 70vw;
   height: 50vh;
-  /* border:solid thick green;  */
 }
-
 
 /* ========================================================================================= */
 /* ======================== Bombardier ===================================================== */
@@ -1630,12 +1617,13 @@
 .st266 {
   fill: #E92227;
 }
-.st267{
-  font-size: 2.0vw;
+
+.st267 {
+  font-size: 2vw;
   font-family: Arial, Helvetica, sans-serif;
-  /* font-weight: bold; */
- fill: #000100;
+  fill: #000100;
 }
+
 /* ===================================================================================== */
 /* ===================== Boeing757  ==================================================== */
 .freeBC_757 {
@@ -2186,11 +2174,8 @@
   fill: #e92227;
 }
 
-
 .hidden {
   visibility: hidden;
-  /* visibility: visible; */
-  /* display: none; */
 }
 
 .visible {
@@ -2204,60 +2189,55 @@
 .prebook {
   fill: #f074f0;
 }
-/* ======================================================================= */
-@media screen and (max-width: 375px) {
+
+/* ========================   (min-width: 376px) and (max-width: 600px)   =============== */
+@media screen and (min-width: 376px) and (max-width: 600px) {
   #B737 {
     position: absolute;
     top: 22vh;
     right: 95vw;
     width: 100vw;
     height: 50vh;
-    transform: rotate(90deg) scale(1.5,2.4);
-      }
+    transform: rotate(90deg) scale(1.55, 2.5);
+  }
   #B757 {
     position: absolute;
     top: 28vh;
     right: 87vw;
     width: 100vw;
     height: 80vw;
-    transform: rotate(90deg) scale(1.5,2.5);
-    }
-  
+    transform: rotate(90deg) scale(1.5, 2.5);
+  }
   #Bombardier {
     position: relative;
     top: -12vh;
     right: 11vw;
-    transform: rotate(90deg) scale(0.63,1.0);
+    transform: rotate(90deg) scale(0.65, 1);
   }
-   
 }
 
-/* ======================================================================= */
-@media screen and (min-width: 376px) and (max-width: 600px) {
+/* ========================   max-width: 375px    ============================================ */
+@media screen and (max-width: 375px) {
   #B737 {
     position: absolute;
-    top: 62vh;
-    right: 15vw;
+    top: 24vh;
+    right: 95vw;
     width: 100vw;
     height: 50vh;
-    /* transform: rotate(90deg) scale(1.5,2.5); */
-    transform: scale(1.5,2.5);
-      }
+    transform: rotate(90deg) scale(1.5, 2.4);
+  }
   #B757 {
     position: absolute;
-    top: 68vh;
-    right: 15vw;
+    top: 28vh;
+    right: 87vw;
     width: 100vw;
     height: 80vw;
-    /* transform: rotate(90deg) scale(1.5,2.5); */
-    transform: scale(1.5,2.5);
-    }
-  
+    transform: rotate(90deg) scale(1.5, 2.5);
+  }
   #Bombardier {
     position: relative;
-    top: -4vh;
+    top: -14vh;
     right: 11vw;
-    transform: rotate(90deg) scale(0.74,1.1);
+    transform: rotate(90deg) scale(0.61, 1);
   }
-   
 }

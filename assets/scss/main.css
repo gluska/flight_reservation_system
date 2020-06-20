@@ -4,14 +4,13 @@
 body {
   background-image: url("./../images/sky_background_header.jpg");
   background-repeat: no-repeat;
-  font-family: "Roboto";
-  font-size: 0.9vw;
+  font-family: "Roboto Condensed";
+  font-size: 0.7vw;
 }
 
 button {
   font-weight: bold;
-  font-size: 0.4vw;
-
+  font-size: 0.7vw;
 }
 
 /* ----------------------- */
@@ -39,35 +38,26 @@ button {
   transition: all 250ms linear;
 }
 
-
-
 .layout {
   display: grid;
-  /*   wirtualnie 3 kolumny  */
   grid-template-columns: 15% 65% 20%;
-  /*   wirtualnie 3 wiersze: 15% wysokości viewportu, 72% wysokości viewportu, 10% wysokości viewportu  */
   grid-template-rows: 15vh 81vh 4vh;
-  /* grid-gap: 2px; */
-  /* max-width: 1280px; */
-  /* margin: 0 auto; */
   min-width: 300px;
   width: 100%;
 }
+
 /* ==========  header left side ========================= */
 .header-l {
   grid-row: 1;
   grid-column: 1 / span 1;
-  /* grid-column-start:1;
-      grid-column-end:2; */
   overflow: hidden;
-  /* background-image: url("./../images/sky_background_header.jpg"); 
-      background-repeat: no-repeat; */
   border-bottom: 0.5vh solid darkblue;
 }
 
 .header-l img {
   margin-top: 0.8vh;
 }
+
 /* ==========  header center ========================= */
 .header-c {
   grid-row: 1;
@@ -76,10 +66,10 @@ button {
   text-align: center;
   padding-top: 2vh;
   font-size: 3.5vh;
-  /* font-family: 'Roboto', sans-serif; */
   display: inline;
   border-bottom: 0.5vh solid darkblue;
 }
+
 /* ==========  header right side ========================= */
 .header-r {
   grid-row: 1;
@@ -96,14 +86,16 @@ button {
 .header-r p {
   display: inline-block;
 }
-.counter{
+
+.counter {
   font-size: 1.2vh;
 }
+
 #comInvitation {
-  /* font-size: 1vw; */
   color: darkblue;
   font-weight: bold;
 }
+
 /* ==========  content ========================= */
 #content {
   grid-row: 2;
@@ -111,66 +103,60 @@ button {
   padding-top: 0.5em;
   padding-left: 0.5em;
   padding-right: 0.2em;
-  /* overflow: hidden; */
   display: flex;
   flex-wrap: wrap;
   height: 2.5vh;
-  /* background-color: grey; */
 }
-
 
 /* ======================  inputs ===================================================== */
-#depDate, #lab_depDate, #lab_dest, #labelNumPas, #inputPas, #inputBag_lab,#inputBag {
+#depDate, #lab_depDate, #lab_dest, #labelNumPas, #inputPas, #inputBag_lab, #inputBag {
   margin-left: 1vw;
 }
+
 label, form {
   z-index: 1;
 }
+
 /* --- miejsca wylotu i destynacja --- */
 select {
   width: auto;
-  font-size: 0.8vw;
+  font-size: 0.7vw;
   font-weight: bold;
   margin-left: 0.2vw;
-  /* background-color: teal; */
 }
+
 /* --- data wylotu , ilość pasażerów ---- */
 input {
   margin-left: 1vw;
-  /* z-index: 1; */
-  font-size: 0.8vw;
-  /* padding: 0.2vw; */
+  font-size: 0.7vw;
   height: 1vw;
   width: auto;
   font-weight: bold;
-  /* background-color: tomato; */
 }
- #pasDisplay{
-  width: 2vw;
-  height: 1vw;
-  font-size: 0.8vw;
-  font-weight: bold;
-  /* background-color: violet; */
- }
- #inputBag {
-  width: 2vw;
-  height: 1vw;
-  font-size: 0.8vw;
-  font-weight: bold;
- }
 
+#pasDisplay {
+  width: 2vw;
+  height: 1vw;
+  font-size: 0.7vw;
+  font-weight: bold;
+}
+
+#inputBag {
+  width: 2vw;
+  height: 1vw;
+  font-size: 0.7vw;
+  font-weight: bold;
+}
 
 /* ==========  sidebar ========================= */
 .sidebar {
   grid-row: 2;
   grid-column: 3/ span 1;
-  
   padding-left: 1vw;
   text-align: left;
   color: black;
   word-wrap: normal;
   font-size: 0.7vw;
-
   background-color: whitesmoke;
 }
 
@@ -179,13 +165,14 @@ input {
   width: 70%;
   margin-left: 15%;
   padding: 0 1vw;
-  
 }
-#summary{
+
+#summary {
   padding-left: 0.1vh;
   text-align: left;
 }
-#summary p{
+
+#summary p {
   margin-top: 0.7vh;
   text-align: center;
   text-decoration: underline;
@@ -193,19 +180,21 @@ input {
 }
 
 /* Zebra striping */
-#summary tr:nth-of-type(odd) { 
-  background: #eee; 
-  /* background: #B3BAC7; */
+#summary tr:nth-of-type(odd) {
+  background: #eee;
 }
-.dataTblR{
-padding-left: 0.5vw;
+
+.dataTblR {
+  padding-left: 0.5vw;
 }
-.blue{
+
+.blue {
   color: blue;
   font-weight: bold;
   font-size: 0.9vw;
 }
-.sumPass{
+
+.sumPass {
   font-weight: normal;
   font-size: 0.65vw;
   font-style: italic;
@@ -225,12 +214,10 @@ padding-left: 0.5vw;
   vertical-align: center;
   padding-top: 0.5vh;
   border-top: 0.5vh solid darkblue;
-  /* background: #e6ffff; */
- 
 }
-/* ================ form passengers ================ */
 
-.pas_window{
+/* ================ form passengers ================ */
+.pas_window {
   visibility: hidden;
   width: 13vw;
   height: auto;
@@ -243,35 +230,26 @@ padding-left: 0.5vw;
   z-index: 1;
   cursor: pointer;
   font-size: 0.7vw;
- 
 }
 
-.pas_window select{
+.pas_window select {
   margin-top: 0.7vh;
   width: 1.8vw;
-  
 }
 
-
-.pas_window label{
+.pas_window label {
   float: left;
 }
-#inputPas{
-margin-left: 1vw;
 
+#inputPas {
+  margin-left: 1vw;
 }
-#btnPas{
+
+#btnPas {
   width: 2vw;
   height: auto;
   font-size: 1.1vw;
 }
-/* ================ form baggage ================ */
-/* #inputBag{
-  position: absolute;
-  top: 10vw;
-  left: 1vw;
-  float: left;
-} */
 
 /* ========================= form login ======================== */
 .login_window {
@@ -293,8 +271,9 @@ margin-left: 1vw;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
-.warn{
-color: red;
+
+.warn {
+  color: red;
 }
 
 .hide_form {
@@ -320,6 +299,7 @@ color: red;
     opacity: 1;
   }
 }
+
 /* -- komunikat na formularzu logowania --- */
 .comm {
   background-color: transparent;
@@ -328,43 +308,35 @@ color: red;
   border: none;
 }
 
-/* =======================   max-width: 600px   ================================== */
-
-
+/* =================  (min-width: 376px) and (max-width: 600px)   ======== */
 @media screen and (min-width: 376px) and (max-width: 600px) {
-  body{
+  body {
     font-size: 2vw;
   }
   .layout {
     display: grid;
-    /*   wirtualnie 1 kolumna */
     grid-template-columns: 100%;
-    /*   wirtualnie 4 wiersze: 15% wysokości viewportu, 65% wysokości viewportu, 15% wysokości viewportu, 8% wysokości viewportu   */
     grid-template-rows: 9vh 68vh auto 4vh;
-    /* grid-template-rows: 9vh auto 15vh 8vh; */
   }
-  
   /* ===== header mobile ==================== */
   .header-l, .header-c, .header-r, .header-r p {
     grid-column: 1;
     grid-row: 1;
     display: block;
-  
     overflow: hidden;
     padding-top: 0vh;
     vertical-align: top;
   }
-  .header-l{
+  .header-l {
     display: none;
   }
-  .header-c{
-    font-size: 2vh;
+  .header-c {
+    font-size: 2vw;
   }
-  #counter, #counter_label{
+  #counter, #counter_label {
     display: none;
-    
   }
-  .btn1{
+  .btn1 {
     font-size: 2vw;
     margin-top: 1.5vh;
     width: auto;
@@ -373,10 +345,9 @@ color: red;
   #content {
     grid-column: 1;
     grid-row: 2;
-    /* display: inline; */
     display: block;
-    }
-  select{
+  }
+  select {
     width: auto;
     height: 3vw;
     font-size: 2vw;
@@ -384,36 +355,31 @@ color: red;
     margin-left: 1vw;
     size: 2;
   }
-  /* #dep_airport{
-    height: 2.2vw;
-  } */
   input {
     margin-top: 1vw;
     height: 3vw;
     font-size: 2vw;
   }
-
-  #inputPas{
+  #inputPas {
     margin-top: 1vw;
     width: 3vw;
     height: 3vw;
     font-size: 2vw;
     display: inline;
   }
-
-#numPas {
-  width: 9vw;
-  height: 3vw;
-}
-#btnPas{
-  font-size: 3vw;
-  text-align: center;
-  width: 3vw;
-}
-#inputBag{
-  width: 7vw;
-  height: 3vw;
-  font-size: 2vw;
+  #numPas {
+    width: 9vw;
+    height: 3vw;
+  }
+  #btnPas {
+    font-size: 3vw;
+    text-align: center;
+    width: 3vw;
+  }
+  #inputBag {
+    width: 7vw;
+    height: 3vw;
+    font-size: 2vw;
   }
   /* ==========  sidebar ========================= */
   .sidebar {
@@ -427,52 +393,44 @@ color: red;
     align-content: center;
   }
   #outputTotal {
-    font-size: 1.8vw;
+    font-size: 2vw;
   }
   /* ==========  footer ========================= */
   .footer {
     grid-column: 1;
     grid-row: 4;
-    
   }
+}
 
- } 
- 
- /* =======================   max-width: 375  ================================== */
-
-
- @media screen and (max-width: 375px){
-  body{
+/* ============================   max-width: 375px          ========================= */
+@media screen and (max-width: 375px) {
+  body {
     font-size: 2vw;
   }
   .layout {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 9vh 68vh auto 4vh;
-    
   }
-  
   /* ===== header mobile ==================== */
   .header-l, .header-c, .header-r, .header-r p {
     grid-column: 1;
     grid-row: 1;
     display: block;
-  
     overflow: hidden;
     padding-top: 0vh;
     vertical-align: top;
   }
-  .header-l{
+  .header-l {
     display: none;
   }
-  .header-c{
-    font-size: 2vh;
+  .header-c {
+    font-size: 2vw;
   }
-  #counter, #counter_label{
+  #counter, #counter_label {
     display: none;
-    
   }
-  .btn1{
+  .btn1 {
     font-size: 2vw;
     margin-top: 1.5vh;
     width: auto;
@@ -481,10 +439,9 @@ color: red;
   #content {
     grid-column: 1;
     grid-row: 2;
-    /* display: inline; */
-    display: block;
-    }
-  select{
+    display: inline;
+  }
+  select {
     width: auto;
     height: 3vw;
     font-size: 2vw;
@@ -492,36 +449,30 @@ color: red;
     margin-left: 1vw;
     size: 2;
   }
-  /* #dep_airport{
-    height: 2.2vw;
-  } */
   input {
     margin-top: 1vw;
     height: 3vw;
     font-size: 2vw;
   }
-
-  #inputPas{
+  #inputPas {
     margin-top: 1vw;
     width: 3vw;
     height: 3vw;
     font-size: 2vw;
     display: inline;
   }
-
-#numPas {
-  width: 9vw;
-  height: 3vw;
-}
-#btnPas{
-  font-size: 3vw;
-  text-align: center;
-  
-}
-#inputBag{
-  width: 7vw;
-  height: 3vw;
-  font-size: 2vw;
+  #numPas {
+    width: 9vw;
+    height: 3vw;
+  }
+  #btnPas {
+    font-size: 3vw;
+    text-align: center;
+  }
+  #inputBag {
+    width: 7vw;
+    height: 3vw;
+    font-size: 2vw;
   }
   /* ==========  sidebar ========================= */
   .sidebar {
@@ -535,15 +486,13 @@ color: red;
     align-content: center;
   }
   #outputTotal {
-    font-size: 1.8vw;
+    font-size: 2vw;
   }
   /* ==========  footer ========================= */
   .footer {
     grid-column: 1;
     grid-row: 4;
-    
   }
+}
 
- } 
- /*koniec mobile */
- 
+/*koniec mobile */
