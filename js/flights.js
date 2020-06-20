@@ -1,6 +1,8 @@
-arrSeats = [];
+import {randomizeNumber} from './functions.js';
 
-var selectedJet; //mapowanie destynacji na samolot
+var arrSeats = [];
+
+var selectedJet; //mapping destinations to an airplane
 document.getElementById("destinations").addEventListener("change", () => {
 var choiceDest = document.getElementById("destinations").value; //wybór destynacji
 if (choiceDest === "GDN") {selectedJet="Bom"} 
@@ -29,21 +31,21 @@ else if (choiceDest === "JFK") {selectedJet="B757"}
 
 // ============================================================================================
 
-//obsługa selecta destynacje
-depTime = "";
-destTime = "";
+//support for destination select
+var depTime = "";
+var destTime = "";
 document.getElementById("destinations").addEventListener("change", function() {
-    var choiceDest = document.getElementById("destinations").value; //wybrana destynacja
-    //document.getElementById("comment").textContent=choice;
+    var choiceDest = document.getElementById("destinations").value; 
     var country = document.getElementById("Bombardier");
     var continental = document.getElementById("B737");
     var interContinental = document.getElementById("B757");
     
     const reservationBombardier = () => {
-        arrSeats = []; //reset wybranych miejsc po odsłonie samolotu
-        //podpięcie nasłuchu dla wszystkich elementów o klasie 'freeFC_BOM' lub 'freeEP_BOM' lub 'freeE_BOM'; w ramach nasluchu po kliknięciu zczytuje wartość atrubutu 'id' z klikniętego elementu i dopisuje do tablicy
+        arrSeats = []; //reset of selected seats after the plane becomes visible
+        //listening for events for all elements with the class name 'freeFC_BOM' or 'freeEP_BOM' or 'freeE_BOM'
+        //after clicking, it reads the value of the 'id' attribute from the clicked element and adds the id to the array
         
-    var list = document.querySelectorAll('.freeFC_BOM,.freeEP_BOM,.freeE_BOM');
+        var list = document.querySelectorAll('.freeFC_BOM,.freeEP_BOM,.freeE_BOM');
     for(var i=0;i<list.length;i++){
     list[i].addEventListener("click", function() {
         var numPer = document.getElementById("pasDisplay").value;
@@ -58,11 +60,7 @@ document.getElementById("destinations").addEventListener("change", function() {
             arrSeats.splice(arrSeats.indexOf(seatNum), 1); //usuwa 1 element począwszy od wskazanego indeksu
             btnChecked.classList.toggle("prebook");
         } 
-        else if (arrSeats.includes(seatNum)){
-            // console.log("To siedzenie zostało już wybrane");
-        }
         else if (arrSeats.length>=numPer){
-            // console.log("Maksymalna ilość miejsc do wybrania to "+numPer);
             document.getElementById("comm_warning1").innerText=`Maksymalna ilość miejsc do wybrania to ${numPer} ! Zmień ilość pasażerów.`;
             document.getElementById("comm_warning1").style.color = "red";
             setTimeout(function(){
@@ -70,7 +68,6 @@ document.getElementById("destinations").addEventListener("change", function() {
             }, 2000);
         }
         else if (arrSeats.length>=9){
-            // console.log("Maksymalna ilość miejsc do wybrania to 9");
             document.getElementById("comm_warning1").innerText="Maksymalna ilość miejsc do wybrania to 9! Zmień ilość pasażerów.";
             document.getElementById("comm_warning1").style.color = "red";
             setTimeout(function(){
@@ -87,9 +84,9 @@ document.getElementById("destinations").addEventListener("change", function() {
 
 
     const reservationBoeing737 = () => {
-        arrSeats = []; //reset wybranych miejsc po odsłonie samolotu
-        //podpięcie nasłuchu dla wszystkich elementów o klasie 'freeEP' lub 'freeFC' lub 'btn_economy'; w ramach nasluchu po kliknięciu zczytuje wartość atrubutu 'id' z klikniętego elementu i wyświetla id w konsoli
-        
+        arrSeats = []; //reset of selected seats after the plane becomes visible
+        //listening for events for all elements with the class name 'freeEP' or 'freeFC' or 'btn_economy'
+        //after clicking, it reads the value of the 'id' attribute from the clicked element and adds the id to the array
        var list = document.querySelectorAll('.freeEP,.freeFC,.btn_economy');
         for(var i=0;i<list.length;i++){
         list[i].addEventListener("click", function () {
@@ -105,10 +102,6 @@ document.getElementById("destinations").addEventListener("change", function() {
                 arrSeats.splice(arrSeats.indexOf(seatNum), 1); //usuwa 1 element począwszy od wskazanego indeksu
                 btnChecked.classList.toggle("prebook");
             } 
-            else if (arrSeats.includes(seatNum)){
-                // console.log("To siedzenie zostało już wybrane");
-
-            }
             else if (arrSeats.length>=numPer){
                 document.getElementById("comm_warning1").innerText=`Maksymalna ilość miejsc do wybrania to ${numPer} ! Zmień ilość pasażerów.`;
                 document.getElementById("comm_warning1").style.color = "red";
@@ -117,7 +110,6 @@ document.getElementById("destinations").addEventListener("change", function() {
                 }, 2000);
             }
             else if (arrSeats.length>=9){
-                // console.log("Maksymalna ilość miejsc do wybrania to 9");
                 document.getElementById("comm_warning1").innerText="Maksymalna ilość miejsc do wybrania to 9! Zmień ilość pasażerów.";
                 document.getElementById("comm_warning1").style.color = "red";
                 setTimeout(function(){
@@ -129,9 +121,9 @@ document.getElementById("destinations").addEventListener("change", function() {
           )};
     }
     const reservationBoeing757 = () => {
-        arrSeats = []; //reset wybranych miejsc po odsłonie samolotu
-        //podpięcie nasłuchu dla wszystkich elementów o klasie 'freeBC_757' lub 'freeEP_757' lub 'btn_economy_757'; w ramach nasluchu po kliknięciu zczytuje wartość atrubutu 'id' z klikniętego elementu i wyświetla id w konsoli
-        
+        arrSeats = []; //reset of selected seats after the plane becomes visible
+        //listening for events for all elements with the class name 'freeBC_757' or 'freeEP_757' or 'btn_economy_757'
+        //after clicking, it reads the value of the 'id' attribute from the clicked element and adds the id to the array
         var list = document.querySelectorAll('.freeBC_757,.freeEP_757,.btn_economy_757');
         for(var i=0;i<list.length;i++){
         list[i].addEventListener("click", function() {
@@ -144,15 +136,10 @@ document.getElementById("destinations").addEventListener("change", function() {
                 btnChecked.classList.toggle("prebook");
             } 
             else if (arrSeats.includes(seatNum)) {
-                arrSeats.splice(arrSeats.indexOf(seatNum), 1); //usuwa 1 element począwszy od wskazanego indeksu
+                arrSeats.splice(arrSeats.indexOf(seatNum), 1); //removes 1 item from the specified index
                 btnChecked.classList.toggle("prebook");
             } 
-            else if (arrSeats.includes(seatNum)){
-                // console.log("To miejsce zostało już wybrane");
-
-            }
             else if (arrSeats.length>=numPer){
-                // console.log("Maksymalna ilość miejsc do wybrania to 9"); 
                 document.getElementById("comm_warning1").innerText= `Maksymalna ilość miejsc do wybrania to ${numPer} !`;
                 document.getElementById("comm_warning1").style.color = "red";
                 setTimeout( () => {
@@ -160,7 +147,6 @@ document.getElementById("destinations").addEventListener("change", function() {
                 }, 2000);
             }
             else if (arrSeats.length>=9){
-                // console.log("Maksymalna ilość miejsc do wybrania to 9");
                 document.getElementById("comm_warning1").innerText="Maksymalna ilość miejsc do wybrania to 9! Zmień ilość pasażerów.";
                 document.getElementById("comm_warning1").style.color = "red";
                 setTimeout(function(){
@@ -172,7 +158,7 @@ document.getElementById("destinations").addEventListener("change", function() {
           )};
     }
     
-//----lot do Gdańska
+//----flight to Gdansk
     if (choiceDest === "GDN"){
         country.classList.remove("hidden");
         country.classList.add("visible");
@@ -184,7 +170,7 @@ document.getElementById("destinations").addEventListener("change", function() {
         destTime = "11:10";
         reservationBombardier();
     } 
-    //----lot do Paryża
+    //----flight to Paris
     else if (choiceDest === "CDG"){
         country.classList.remove("visible");
         country.classList.add("hidden");
@@ -197,7 +183,7 @@ document.getElementById("destinations").addEventListener("change", function() {
         reservationBoeing737();
         
     }
-    //----lot do Nowego Jorku
+    //----flight to New York
     else if (choiceDest === "JFK"){
         country.classList.remove("visible");
         country.classList.add("hidden");
@@ -295,7 +281,7 @@ if(sumPas > 9){
 })
 
 
-// ======================         przygotowanie podsumowania     ======================================================================
+// ======================         preparing a summary    ======================================================================
 
 var depDate;
 document.getElementById("depDate").addEventListener("change", function() {
@@ -314,25 +300,24 @@ var infPrice = 6.00;
 var bag_prices;
 var bagPrice = 0;
 
-const summary = () =>{
-// fetch("../js/seats.json") ////pobranie danych z pliku json hostowanego lokalnie - ścieżka z punktu widzenia pliku ap.js
+const getSummary = () =>{
 document.getElementById("comm_cart").innerText = "";    
 
 fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/baggage.json")
-        .then((resp) => resp.json()) // Transform the data into json
+        .then((resp) => resp.json()) // transform the data into json
         .then(function (data) {
             let inputBagQuan = document.getElementById("inputBag").value;
             console.log(inputBagQuan);
-            bag_prices = data.filter(el => el.jet === selectedJet && el.bagQuan === inputBagQuan); //nowa zmienna = wyfiltrowanej tablicy json dot wybranego samolotu i wybranych siedzeń
+            bag_prices = data.filter(el => el.jet === selectedJet && el.bagQuan === inputBagQuan); 
             bagPrice = (inputBagQuan == "0") ? "0.00" : bag_prices[0].price;
             
             
             });
       
         fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/seats.json") 
-        .then((resp) => resp.json()) // Transform the data into json
+        .then((resp) => resp.json()) // transform the data into json
         .then((data) =>  {
-            jet_prices = data.filter(el => el.jet === selectedJet && arrSeats.includes(el.seat)); //nowa zmienna = wyfiltrowanej tablicy json dot wybranego samolotu i wybranych siedzeń
+            jet_prices = data.filter(el => el.jet === selectedJet && arrSeats.includes(el.seat)); 
             tarif = jet_prices[0].code;
             if(tarif == "BC"){tarif_desc = "Business Class" }
             else if(tarif == "FC"){tarif_desc = "First Class" }
@@ -347,7 +332,7 @@ fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master
             totalPrice = 0;
             })
         .then(()=> {
-            let res_seat_output = arrSeats.join([separator = ', ']);
+            let res_seat_output = arrSeats.join(", ");
             let numTickets = arrSeats.length;
             let adt_pas = document.getElementById('adt_pas').value;
             let teen_pas = document.getElementById('teen_pas').value;
@@ -359,12 +344,12 @@ fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master
             let visInf = document.getElementById('sumInf');
             let inputBagQuan = document.getElementById("inputBag").value;
             // for (var i in jet_prices) {
-            //     totalPrice += parseFloat(jet_prices[i].price); //sumowanie cen wybranych siedzeń
+            //     totalPrice += parseFloat(jet_prices[i].price); 
             // };
             
             // console.log(bagPrice);
             totalPrice = parseInt(adt_pas) * standardPrice+parseInt(teen_pas)*teensPrice+parseInt(kid_pas)*kidPrice+parseInt(inf_pas)*infPrice+parseInt(bagPrice);
-            totalPriceFix = totalPrice.toFixed(2); //zaokrąglenie do 2 miejsc
+            totalPriceFix = totalPrice.toFixed(2); //roundeing to 2 decimal places
 
 
             if(adt_pas === "0") {visAdt.style.visibility = "hidden";} {visAdt.style.visibility="visible";};
@@ -376,7 +361,7 @@ fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master
             let choiceDest = document.getElementById('destinations')[document.getElementById('destinations').selectedIndex].innerHTML;
             console.log("to jest res_seat_output: "+res_seat_output);
 
-            //wyprowadzenie komunikatów na stronie- sekcja sidebar
+            //outputting messages on the page- section sidebar
             document.getElementById("summary").classList.remove("hidden");
             document.getElementById("summary").classList.add("visible");
             document.getElementById("depDate_conf").innerHTML = depDate;
@@ -411,7 +396,7 @@ fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master
 
 
 };
-//=====================    obsługa przycisku generowania podsumowania i walidacje   ======================================
+//=====================    support for button  for summary  generator  ======================================
 document.getElementById("btnConfirm").addEventListener("click", function() {
     var el1 = document.getElementById("dep_airport");
     var el2 = document.getElementById("destinations");
@@ -419,7 +404,7 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
     var el4 = document.getElementById("pasDisplay").value;
     var el5 = arrSeats.length;
 
-    //walidacja wypełnienia miejsca wylotu
+    //checking if departure has been selected
     if(el1 == null || el1.value === "blank"){
         var com1 = document.createElement("P");               
         com1.innerText = "Nie wybrano miejsca wylotu!"; 
@@ -429,7 +414,7 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
         document.getElementById("comm_warning1").removeChild(com1);
         }, 2000);
     }
-    //walidacja wypełnienia miejsca docelowego
+    //checking if the destination has been selected
     else if(el2 == null || el2.value === "blank"){
         var com2 = document.createElement("P");               
         com2.innerText = "Nie wybrano miejsca docelowego!"; 
@@ -440,7 +425,7 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
         }, 2000);
 
     }
-    //walidacja wypełnienia daty wylotu
+    //checking if the departure date has been provided
     else if(el3 == null || el3.value === ""){
         var com3 = document.createElement("P");               
         com3.innerText = "Nie wybrano daty wylotu!"; 
@@ -450,7 +435,7 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
         document.getElementById("comm_warning1").removeChild(com3);
         }, 2000);
     }
-    //walidacja czy nieprzekroczono max ilości pasażerów =9
+    //validation whether max of passengers <= 9
     else if(el4 > 9){
         var com4 = document.createElement("P");               
         com4.innerText = "Skoryguj ilość pasażerów - max 9 osób!"; 
@@ -461,7 +446,7 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
         }, 2000);
     }
  
-    //walidacja czy wskazano min 1 miejsce
+    //validation whether min 1 place is indicated
     else if(arrSeats.length === 0){
         var com5 = document.createElement("P");               
         com5.innerText = "Nie wybrano żadnego miejsca!"; 
@@ -472,7 +457,7 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
         }, 2000);
     }
 
-    //walidacja czy ilość zaznaczonych miejsc jest zgodna z ilością pasażerów
+    //validation whether the number of marked places is equal with the number of passengers
     else if(el4 != el5){
         var com5 = document.createElement("P");               
         com5.innerText = `Zaznacz ${el4} miejsc!`; 
@@ -484,8 +469,8 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
     }
 
 
-    //  blokada => wymuszenie zalogowania się przed możliwością wygenerowania podsumowania
-    // else if(document.getElementById("comInvitation").textContent === ""){//nie było skutecznego logowania
+    //  lock => force logging in before being able to generate a summary
+    // else if(document.getElementById("comInvitation").textContent === ""){//no successful login
     //     document.getElementById("comm_warning1").innerText="Najpierw musisz się zalogować!";
     //     document.getElementById("comm_warning1").style.color = "red";
     //     setTimeout( () => {
@@ -493,32 +478,32 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
     //     }, 2000);
     // } 
     
-    // wywołanie generowania podsumowania
-    else {summary()}
+    // call for summary generator
+    else {getSummary()}
 
    
 
 });
 
-// =====================  tymczasowy koszyk zakupów =============
+// =====================  temporary shopping cart =============
 // 
 
 var getShoppingCart = () => {
     fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/baggage.json")
-    .then((resp) => resp.json()) // Transform the data into json
+    .then((resp) => resp.json()) // transform the data into json
     .then(function (data) {
         let inputBagQuan = document.getElementById("inputBag").value;
         console.log(inputBagQuan);
-        bag_prices = data.filter(el => el.jet === selectedJet && el.bagQuan === inputBagQuan); //nowa zmienna = wyfiltrowanej tablicy json dot wybranego samolotu i wybranych siedzeń
+        bag_prices = data.filter(el => el.jet === selectedJet && el.bagQuan === inputBagQuan); 
         bagPrice = (inputBagQuan == "0") ? "0.00" : bag_prices[0].price;
         
         
         });
     
     fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/seats.json") 
-    .then((resp) => resp.json()) // Transform the data into json
+    .then((resp) => resp.json()) //transform the data into json
     .then((data) =>  {
-        jet_prices = data.filter(el => el.jet === selectedJet && arrSeats.includes(el.seat)); //nowa zmienna = wyfiltrowanej tablicy json dot wybranego samolotu i wybranych siedzeń
+        jet_prices = data.filter(el => el.jet === selectedJet && arrSeats.includes(el.seat)); 
         tarif = jet_prices[0].code;
         if(tarif == "BC"){tarif_desc = "Business Class" }
         else if(tarif == "FC"){tarif_desc = "First Class" }
@@ -530,7 +515,7 @@ var getShoppingCart = () => {
         kidPrice = standardPrice * 0.5;
 
         totalPrice = 0;
-        let res_seat_output = arrSeats.join([separator = ', ']);
+        let res_seat_output = arrSeats.join(", ");
         let numTickets = arrSeats.length;
         let adt_pas = document.getElementById('adt_pas').value;
         let teen_pas = document.getElementById('teen_pas').value;
@@ -541,20 +526,20 @@ var getShoppingCart = () => {
         let visKid = document.getElementById('sumKid');
         let visInf = document.getElementById('sumInf');
         let inputBagQuan = document.getElementById("inputBag").value;
-        console.log("OK")
+        // console.log("OK")
         totalPrice = parseInt(adt_pas) * standardPrice+parseInt(teen_pas)*teensPrice+parseInt(kid_pas)*kidPrice+parseInt(inf_pas)*infPrice+parseInt(bagPrice);
         console.log(totalPrice);
-        totalPriceFix = totalPrice.toFixed(2); //zaokrąglenie do 2 miejsc
+        totalPriceFix = totalPrice.toFixed(2); //roundeing to 2 decimal places
         document.getElementById("comm_cart").innerText = "";
         document.getElementById("comm_cart").innerText = `Aktualna wartość koszyka: ${totalPriceFix} PLN`;
         });
     };
-
+// ============================ listening on events - click on seat or change additional baggage ===========
     var list_tarif = document.querySelectorAll('.freeFC_BOM,.freeEP_BOM,.freeE_BOM, .freeEP,.freeFC,.btn_economy,.freeBC_757,.freeEP_757,.btn_economy_757');
     
     for(var i=0;i<list_tarif.length;i++){
         list_tarif[i].addEventListener("click", function() {
-            console.log("kliknieto");
+            // console.log("kliknieto");
             getShoppingCart();
         });
     };
@@ -562,3 +547,6 @@ var getShoppingCart = () => {
     document.getElementById("inputBag").addEventListener("change", function() {
         getShoppingCart();
     });
+
+    let luckyNumber = randomizeNumber();
+    console.log(luckyNumber);

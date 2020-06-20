@@ -1,0 +1,1 @@
+export const randomizeNumber = () => {return Math.random()};
