@@ -28,6 +28,10 @@ The user can change the choice of seating positions, choose additional luggage (
 Summary visible after confirming the entered data and after logging in.
 Logging in is done by checking the data provided by the user (comparison to data from a JSON file).
 The login session lasts max. 3 minutes - after this time the user will be automatically log out.
+Sample login details (possible to change in file 'personal_data.json'):
+* login : "marcin_w", pwd : "1234",
+* login : "edyta_g", pwd : "1234qwe,
+* login : "adam_s", pwd : "1234azx"
 	
 ## Technologies
 Project is created with:
@@ -44,7 +48,7 @@ To run this project, install it locally using npm:
 ```
 $ cd ../project_folder
 $ npm install
-$ npm node app
+$ node app.js
 ```
 ## Screen from app
-![ScreenFromApp](./assets/images/project_screen.jpg) 
+![ScreenFromApp](./assets/images/project_screen2.jpg) 

@@ -1,16 +1,24 @@
-@charset "UTF-8";
 /* ================= main settings  ======================================= */
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 body {
-  background-image: url("./../images/sky_background_header.jpg");
+  background-image: url("./../images/sky_background.jpg");
   background-repeat: no-repeat;
   font-family: "Roboto Condensed";
-  font-size: 0.7vw;
+  font-size: 1.3vw;
+  text-align: center;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 15% 65% 20%;
+  grid-template-rows: 16vh 20vh 55vh 4vh;
+  min-width: 300px;
+  width: 100%;
 }
 
 button {
   font-weight: bold;
-  font-size: 0.7vw;
+  font-size: 1.3vw -0.3vw;
 }
 
 /* ----------------------- */
@@ -18,14 +26,16 @@ button {
   background: #888888;
   border: 1px solid #767676;
   box-shadow: 0px 2px 0 #737373, 2px 4px 6px #7b7b7b;
+  border-radius: 6px;
   font-weight: 900;
-  font-size: 0.7vw;
+  font-size: 1.3vw -0.6vw;
+  height: 1.4vw;
   word-wrap: normal;
-  width: 8vw;
-  height: 3vh;
+  width: auto;
   letter-spacing: 1px;
   transition: all 150ms linear;
   margin-top: 0.1vw;
+  padding: 0 0.7vw;
 }
 
 .btn1:hover {
@@ -38,20 +48,12 @@ button {
   transition: all 250ms linear;
 }
 
-.layout {
-  display: grid;
-  grid-template-columns: 15% 65% 20%;
-  grid-template-rows: 15vh 81vh 4vh;
-  min-width: 300px;
-  width: 100%;
-}
-
 /* ==========  header left side ========================= */
 .header-l {
   grid-row: 1;
   grid-column: 1 / span 1;
   overflow: hidden;
-  border-bottom: 0.5vh solid darkblue;
+  border-bottom: 0.5vh solid #093479;
 }
 
 .header-l img {
@@ -65,9 +67,10 @@ button {
   overflow: hidden;
   text-align: center;
   padding-top: 2vh;
-  font-size: 3.5vh;
+  font-size: 4.8vh;
+  font-weight: bold;
   display: inline;
-  border-bottom: 0.5vh solid darkblue;
+  border-bottom: 0.5vh solid #093479;
 }
 
 /* ==========  header right side ========================= */
@@ -76,95 +79,144 @@ button {
   grid-column: 3/ span 1;
   width: 100%;
   overflow: hidden;
-  padding-top: 3px;
+  padding-top: 1px;
   padding-left: 1vw;
-  float: right;
+  padding-right: 1vw;
   vertical-align: top;
-  border-bottom: 0.5vh solid darkblue;
+  border-bottom: 0.5vh solid #093479;
+  text-align: center;
 }
 
 .header-r p {
   display: inline-block;
 }
 
-.counter {
-  font-size: 1.2vh;
+#comInvitation {
+  text-align: center;
+  color: #093479;
+  font-weight: bold;
+  font-size: 0.9vw;
 }
 
-#comInvitation {
-  color: darkblue;
-  font-weight: bold;
+.counter {
+  font-size: 1.5vh;
+  visibility: hidden;
+}
+
+#btnLogin {
+  font-size: 0.9vw;
+}
+
+#btnLogout {
+  visibility: hidden;
+  font-size: 0.9vw;
 }
 
 /* ==========  content ========================= */
-#content {
+#content_up {
   grid-row: 2;
+  grid-column: 1 / span 2;
+  padding-top: 0.8vh;
+  padding-left: 0.3vw;
+  width: 99%;
+  background-color: #093479;
+  color: whitesmoke;
+  z-index: 1;
+}
+
+#content {
+  grid-row: 3;
   grid-column: 1 / span 2;
   padding-top: 0.5em;
   padding-left: 0.5em;
   padding-right: 0.2em;
   display: flex;
   flex-wrap: wrap;
-  height: 2.5vh;
+  z-index: 0;
 }
 
 /* ======================  inputs ===================================================== */
-#depDate, #lab_depDate, #lab_dest, #labelNumPas, #inputPas, #inputBag_lab, #inputBag {
-  margin-left: 1vw;
+#lab_depDate, #lab_dest, #labelNumPas {
+  padding-left: 1.5vw;
+  border-radius: 6px;
+}
+
+#lab_dep_airport {
+  padding-left: 1.5vw;
+}
+
+#inputPas {
+  padding-left: 3.5vw;
+}
+
+#bag {
+  padding-left: 1.7vw;
+}
+
+#inputBag {
+  border-radius: 6px;
+  padding-left: 1.5vw;
 }
 
 label, form {
-  z-index: 1;
+  z-index: 0;
 }
 
-/* --- miejsca wylotu i destynacja --- */
 select {
   width: auto;
-  font-size: 0.7vw;
+  min-width: 3vw;
+  font-size: 1.3vw;
   font-weight: bold;
   margin-left: 0.2vw;
+  border-radius: 6px;
+  height: 1.6vw;
 }
 
-/* --- data wylotu , ilość pasażerów ---- */
 input {
-  margin-left: 1vw;
-  font-size: 0.7vw;
-  height: 1vw;
+  font-size: 1.3vw;
+  height: 1.6vw;
   width: auto;
   font-weight: bold;
+  border-radius: 6px;
 }
 
 #pasDisplay {
   width: 2vw;
-  height: 1vw;
-  font-size: 0.7vw;
+  height: 1.6vw;
+  font-size: 1.3vw;
   font-weight: bold;
 }
 
 #inputBag {
-  width: 2vw;
-  height: 1vw;
-  font-size: 0.7vw;
-  font-weight: bold;
+  height: 2vw;
+  width: 4vw;
 }
 
 /* ==========  sidebar ========================= */
 .sidebar {
-  grid-row: 2;
+  grid-row: 2/ span 2;
   grid-column: 3/ span 1;
   padding-left: 1vw;
   text-align: left;
   color: black;
   word-wrap: normal;
-  font-size: 0.7vw;
+  font-size: 1vw;
   background-color: whitesmoke;
+}
+
+#comm_cart, #comm_warning1 {
+  font-size: 1vw;
 }
 
 #btnConfirm {
   margin-top: 0.6vh;
-  width: 70%;
-  margin-left: 15%;
-  padding: 0 1vw;
+  width: 90%;
+  margin-left: 5%;
+  padding: 0 0.3vw;
+  background-color: red;
+  color: white;
+  font-size: 1vw;
+  height: 1.6vw;
 }
 
 #summary {
@@ -191,45 +243,47 @@ input {
 .blue {
   color: blue;
   font-weight: bold;
-  font-size: 0.9vw;
+  font-size: 1.3vw;
 }
 
 .sumPass {
   font-weight: normal;
-  font-size: 0.65vw;
+  font-size: 0.95vw;
   font-style: italic;
 }
 
 #outputTotal {
   font-weight: bold;
-  font-size: 0.9vw;
+  font-size: 1.3vw;
   background: #B3BAC7;
 }
 
 /* ==========  footer ========================= */
 .footer {
-  grid-row: 3;
+  grid-row: 4;
   grid-column: 1 /span 3;
   text-align: center;
   vertical-align: center;
   padding-top: 0.5vh;
-  border-top: 0.5vh solid darkblue;
+  border-top: 0.5vh solid #093479;
+  font-size: 0.9vw;
 }
 
 /* ================ form passengers ================ */
 .pas_window {
-  visibility: hidden;
-  width: 13vw;
+  display: none;
+  width: 33vw;
   height: auto;
   background-color: lightgrey;
+  float: left;
   position: relative;
-  float: right;
-  top: 0.8vw;
-  left: 0px;
-  padding: 0.4vw;
-  z-index: 1;
+  top: 0vh;
+  left: 0vw;
+  padding: 1.2vw;
+  z-index: 2;
   cursor: pointer;
-  font-size: 0.7vw;
+  font-size: 1.3vw;
+  color: #093479;
 }
 
 .pas_window select {
@@ -241,19 +295,57 @@ input {
   float: left;
 }
 
-#inputPas {
-  margin-left: 1vw;
+.btnFormPas .cameraDown {
+  position: relative;
+  top: -2vw;
+  left: 12vw;
+  width: 2vw;
+  height: 2vw;
+  cursor: pointer;
+  background: #cccccc;
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
 }
 
-#btnPas {
+.cameraUp {
+  position: relative;
+  top: -2vw;
+  left: 12vw;
   width: 2vw;
-  height: auto;
-  font-size: 1.1vw;
+  height: 2vw;
+  cursor: pointer;
+  background: #cccccc;
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
+}
+
+.btnFormPas .cameraDown:before {
+  content: "";
+  position: relative;
+  top: 90%;
+  left: 10%;
+  width: 0;
+  height: 0;
+  border-top: 1.3vw solid #093479;
+  border-left: 0.7vw solid transparent;
+  border-right: 0.7vw solid transparent;
+}
+
+.btnFormPas .cameraUp:before {
+  content: "";
+  position: relative;
+  top: -50%;
+  left: 10%;
+  width: 0;
+  height: 0;
+  border-bottom: 1.3vw solid #093479;
+  border-left: 0.7vw solid transparent;
+  border-right: 0.7vw solid transparent;
 }
 
 /* ========================= form login ======================== */
 .login_window {
-  visibility: hidden;
+  display: none;
   width: 75vw;
   height: 84vh;
   background-color: lightgrey;
@@ -261,25 +353,48 @@ input {
   cursor: pointer;
   font-weight: bold;
   top: 30px;
-  left: 20px;
+  left: 22px;
   padding: 30px 0 0 50px;
   z-index: 1;
+  color: black;
+}
+
+#btn2 {
+  font-size: 1vw;
+  height: 1.8vw;
+}
+
+#btnCan1 {
+  font-size: 1vw;
+  height: 1.8vw;
+  color: red;
+  margin-left: 3vw;
 }
 
 .show {
+  display: block;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
+}
+
+.show_2 {
   visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
 }
 
 .warn {
   color: red;
 }
 
+.hidden {
+  display: none;
+}
+
 .hide_form {
-  visibility: hidden;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
+  display: none;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -300,10 +415,10 @@ input {
   }
 }
 
-/* -- komunikat na formularzu logowania --- */
+/* -- communicate on login form --- */
 .comm {
   background-color: transparent;
-  margin-left: 1vw;
+  margin-left: 2vw;
   color: black;
   border: none;
 }
@@ -311,18 +426,22 @@ input {
 /* =================  (min-width: 376px) and (max-width: 600px)   ======== */
 @media screen and (min-width: 376px) and (max-width: 600px) {
   body {
-    font-size: 2vw;
+    font-size: 2.8vw;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
   }
   .layout {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 9vh 68vh auto 4vh;
+    grid-template-rows: 9vh 14vh 60vh auto 2vh;
   }
   /* ===== header mobile ==================== */
   .header-l, .header-c, .header-r, .header-r p {
     grid-column: 1;
     grid-row: 1;
     display: block;
+    width: 100%;
     overflow: hidden;
     padding-top: 0vh;
     vertical-align: top;
@@ -331,86 +450,191 @@ input {
     display: none;
   }
   .header-c {
-    font-size: 2vw;
+    font-size: 2.8vw;
   }
   #counter, #counter_label {
     display: none;
   }
   .btn1 {
-    font-size: 2vw;
+    font-size: 2.8vw;
+    height: auto;
     margin-top: 1.5vh;
     width: auto;
   }
+  #btnLogin {
+    font-size: 2.4vw;
+  }
+  #btnLogout {
+    visibility: hidden;
+    font-size: 2.4vw;
+  }
+  #comInvitation {
+    font-size: 2.4vw;
+  }
   /* ==========  content ========================= */
-  #content {
-    grid-column: 1;
+  #content_up {
+    grid-column: 1 span 1;
     grid-row: 2;
-    display: block;
+    width: 100%;
   }
   select {
     width: auto;
-    height: 3vw;
-    font-size: 2vw;
-    margin-top: 1vw;
-    margin-left: 1vw;
+    height: auto;
+    font-size: 2.8vw;
+    margin-top: 0.8vw;
+    margin-left: 0.8vw;
     size: 2;
   }
   input {
-    margin-top: 1vw;
-    height: 3vw;
-    font-size: 2vw;
+    margin-top: 0.8vw;
+    height: 3.8vw;
+    font-size: 2.8vw;
   }
   #inputPas {
-    margin-top: 1vw;
+    margin-top: 0.8vw;
     width: 3vw;
-    height: 3vw;
-    font-size: 2vw;
+    height: 3.8vw;
+    font-size: 2.8vw;
     display: inline;
   }
   #numPas {
     width: 9vw;
-    height: 3vw;
+    height: 3.8vw;
   }
   #btnPas {
-    font-size: 3vw;
+    font-size: 3.8vw;
     text-align: center;
-    width: 3vw;
+  }
+  #pasDisplay {
+    width: 2vw;
+    height: 3.8vw;
+    font-size: 2.8vw;
   }
   #inputBag {
-    width: 7vw;
-    height: 3vw;
-    font-size: 2vw;
+    width: 9vw;
+    height: 3.8vw;
+    font-size: 2.8vw;
+  }
+  .btnFormPas .cameraDown {
+    position: relative;
+    top: -5vw;
+    left: 23vw;
+    width: 3.8vw;
+    height: 3.8vw;
+    cursor: pointer;
+    background: #cccccc;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+  }
+  .cameraUp {
+    position: relative;
+    top: -5vw;
+    left: 23vw;
+    width: 3.8vw;
+    height: 3.8vw;
+    cursor: pointer;
+    background: #cccccc;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+  }
+  .btnFormPas .cameraDown:before {
+    content: "";
+    position: relative;
+    top: 90%;
+    left: 7%;
+    width: 0;
+    height: 0;
+    border-top: 3vw solid #093479;
+    border-left: 1.7vw solid transparent;
+    border-right: 1.7vw solid transparent;
+  }
+  .btnFormPas .cameraUp:before {
+    content: "";
+    position: relative;
+    top: -100%;
+    left: 10%;
+    width: 0;
+    height: 0;
+    border-bottom: 3vw solid #093479;
+    border-left: 1.7vw solid transparent;
+    border-right: 1.7vw solid transparent;
+  }
+  .pas_window {
+    width: 52vw;
+    height: auto;
+    position: relative;
+    top: 2vh;
+    left: 2vw;
+    padding: 1.2vw;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 2.8vw;
+    color: #093479;
+  }
+  #form_pas table tr td select {
+    width: 9vw;
+  }
+  #btn2, #btnCan1 {
+    font-size: 2.8vw;
+    height: 4.8vw;
+  }
+  #content {
+    grid-column: 1;
+    grid-row: 3;
+    display: block;
   }
   /* ==========  sidebar ========================= */
   .sidebar {
     grid-column: 1;
-    grid-row: 3;
-    font-size: 1.7vw;
+    grid-row: 4;
+    font-size: 2.5vw;
     vertical-align: top;
+    text-align: center;
   }
   #btnConfirm {
-    margin-top: 1vw;
+    margin-top: 2vw;
     align-content: center;
+    font-size: 2.8vw;
+    width: 50%;
+    height: 4.8vw;
   }
   #outputTotal {
-    font-size: 2vw;
+    font-size: 2.8vw;
+  }
+  .sidebar table {
+    width: 90%;
+    margin: 2vw auto;
+    font-size: 2.5vw;
+  }
+  #comm_cart, #comm_warning1 {
+    font-size: 2.8vw;
+  }
+  .sumPass {
+    font-size: 2.3vw;
+  }
+  .blue {
+    font-size: 2.5vw;
   }
   /* ==========  footer ========================= */
   .footer {
     grid-column: 1;
-    grid-row: 4;
+    grid-row: 5;
+    font-size: 2.5vw;
   }
 }
 
 /* ============================   max-width: 375px          ========================= */
 @media screen and (max-width: 375px) {
   body {
-    font-size: 2vw;
+    font-size: 2.8vw;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
   }
   .layout {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 9vh 68vh auto 4vh;
+    grid-template-rows: 9vh 14vh 60vh auto 2vh;
   }
   /* ===== header mobile ==================== */
   .header-l, .header-c, .header-r, .header-r p {
@@ -425,73 +649,182 @@ input {
     display: none;
   }
   .header-c {
-    font-size: 2vw;
+    font-size: 2.8vw;
   }
   #counter, #counter_label {
     display: none;
   }
   .btn1 {
-    font-size: 2vw;
+    font-size: 2.8vw;
+    height: auto;
     margin-top: 1.5vh;
     width: auto;
   }
+  #btnLogin {
+    font-size: 2.4vw;
+  }
+  #btnLogout {
+    visibility: hidden;
+    font-size: 2.4vw;
+  }
+  #comInvitation {
+    font-size: 2.4vw;
+  }
   /* ==========  content ========================= */
-  #content {
-    grid-column: 1;
+  #content_up {
+    grid-column: 1 span 1;
     grid-row: 2;
-    display: inline;
+    display: inline-block;
+    width: 100%;
   }
   select {
     width: auto;
-    height: 3vw;
-    font-size: 2vw;
-    margin-top: 1vw;
-    margin-left: 1vw;
+    height: auto;
+    font-size: 2.8vw;
+    margin-top: 0.8vw;
+    margin-left: 0.8vw;
     size: 2;
   }
   input {
-    margin-top: 1vw;
-    height: 3vw;
-    font-size: 2vw;
+    margin-top: 0.8vw;
+    height: 3.8vw;
+    font-size: 2.8vw;
   }
   #inputPas {
-    margin-top: 1vw;
+    margin-top: 0.8vw;
     width: 3vw;
-    height: 3vw;
-    font-size: 2vw;
+    height: 3.8vw;
+    font-size: 2.8vw;
     display: inline;
   }
   #numPas {
     width: 9vw;
-    height: 3vw;
+    height: 3.8vw;
   }
   #btnPas {
-    font-size: 3vw;
+    font-size: 3.8vw;
     text-align: center;
   }
+  #pasDisplay {
+    width: 2vw;
+    height: 3.8vw;
+    font-size: 2.8vw;
+  }
   #inputBag {
-    width: 7vw;
-    height: 3vw;
-    font-size: 2vw;
+    width: 12vw;
+    height: 3.8vw;
+    font-size: 2.8vw;
+  }
+  .btnFormPas .cameraDown {
+    position: relative;
+    top: -5vw;
+    left: 23vw;
+    width: 3.8vw;
+    height: 3.8vw;
+    cursor: pointer;
+    background: #cccccc;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+  }
+  .cameraUp {
+    position: relative;
+    top: -5vw;
+    left: 23vw;
+    width: 3.8vw;
+    height: 3.8vw;
+    cursor: pointer;
+    background: #cccccc;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+  }
+  .btnFormPas .cameraDown:before {
+    content: "";
+    position: relative;
+    top: 90%;
+    left: 7%;
+    width: 0;
+    height: 0;
+    border-top: 3vw solid #093479;
+    border-left: 1.7vw solid transparent;
+    border-right: 1.7vw solid transparent;
+  }
+  .btnFormPas .cameraUp:before {
+    content: "";
+    position: relative;
+    top: -100%;
+    left: 10%;
+    width: 0;
+    height: 0;
+    border-bottom: 3vw solid #093479;
+    border-left: 1.7vw solid transparent;
+    border-right: 1.7vw solid transparent;
+  }
+  .pas_window {
+    width: 52vw;
+    height: auto;
+    position: relative;
+    top: 2vh;
+    left: 2vw;
+    padding: 1.2vw;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 2.8vw;
+    color: #093479;
+  }
+  #form_pas table tr td select {
+    width: 9vw;
+  }
+  #btn2, #btnCan1 {
+    font-size: 2.8vw;
+    height: 4.8vw;
+  }
+  .cell_align {
+    padding-top: 2vw;
+    text-align: left;
+    padding-left: 3vw;
+  }
+  #content {
+    grid-column: 1;
+    grid-row: 3;
+    display: block;
   }
   /* ==========  sidebar ========================= */
   .sidebar {
     grid-column: 1;
-    grid-row: 3;
-    font-size: 1.7vw;
+    grid-row: 4;
+    font-size: 2.5vw;
     vertical-align: top;
+    text-align: center;
   }
   #btnConfirm {
-    margin-top: 1vw;
+    margin-top: 2vw;
     align-content: center;
+    font-size: 2.8vw;
+    width: 50%;
+    height: 4.8vw;
   }
   #outputTotal {
-    font-size: 2vw;
+    font-size: 2.8vw;
+  }
+  .sidebar table {
+    width: 90%;
+    margin: 2vw auto;
+    font-size: 2.5vw;
+  }
+  #comm_cart, #comm_warning1 {
+    font-size: 2.8vw;
+  }
+  .sumPass {
+    font-size: 2.3vw;
+  }
+  .blue {
+    font-size: 2.5vw;
   }
   /* ==========  footer ========================= */
   .footer {
     grid-column: 1;
-    grid-row: 4;
+    grid-row: 5;
+    font-size: 2.5vw;
   }
 }
 

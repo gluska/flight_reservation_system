@@ -2,30 +2,43 @@
 /* ================= main settings  ======================================= */
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 
+
 $font-family:"Roboto Condensed";
-$font-size-main: 0.7vw;
-$font-size-mobile: 2.0vw;
-$font-size-counter: 1.2vh;
-$font-size-big: 3.5vh;
-$margin_std: 1vw;
+$font-size-main: 1.3vw;
+$font-size-summ: 1vw;
+$font-size-mobile: 2.8vw;
+$font-size-counter: 1.5vh;
+$font-size-big: 4.8vh;
+$margin_std: 2vw;
+$padding_left_std: 1.5vw;
+$margin_std_mobile: 0.8vw;
 $border-color: #767676;
 $bcg_col_main: #888888;
 $bcg_col_hov: #7c7c7c;
-$summary_col: darkblue;
-$line_col: darkblue;
-
-
+$color2:#093479;
+$color3:whitesmoke;
+$color_warn: red;
+$summary_col: #093479;
+$line_col: #093479;
 
 body {
-  background-image: url("./../images/sky_background_header.jpg");
+  background-image: url("./../images/sky_background.jpg");
   background-repeat: no-repeat;
   font-family: $font-family;
   font-size: $font-size-main;
+  text-align: center;
 }
 
+.layout {
+  display: grid;
+  grid-template-columns: 15% 65% 20%;
+  grid-template-rows: 16vh 20vh 55vh 4vh;
+  min-width: 300px;
+  width: 100%;
+}
 button {
   font-weight: bold;
-  font-size: $font-size-main;
+  font-size: $font-size-main -0.3vw;
 
 }
 
@@ -34,14 +47,16 @@ button {
   background: $bcg_col_main;
   border: 1px solid $border-color;
   box-shadow: 0px 2px 0 #737373, 2px 4px 6px #7b7b7b;
+  border-radius: 6px;
   font-weight: 900;
-  font-size: $font-size-main;
+  font-size: $font-size-main -0.6vw;
+  height: $font-size-main + 0.1vw;
   word-wrap: normal;
-  width: 8vw;
-  height: 3vh;
+  width: auto;
   letter-spacing: 1px;
   transition: all 150ms linear;
   margin-top: 0.1vw;
+  padding: 0 0.7vw;
   &:hover {
 		background: $bcg_col_hov;
 		border: 1px solid rgba(0, 0, 0, 0.05);
@@ -53,13 +68,7 @@ button {
 	}
 }
 
-.layout {
-  display: grid;
-  grid-template-columns: 15% 65% 20%;
-  grid-template-rows: 15vh 81vh 4vh;
-  min-width: 300px;
-  width: 100%;
-}
+
 /* ==========  header left side ========================= */
 .header-l {
   grid-row: 1;
@@ -79,6 +88,7 @@ button {
   text-align: center;
   padding-top: 2vh;
   font-size: $font-size-big;
+  font-weight: bold;
   display: inline;
   border-bottom: 0.5vh solid $line_col;
 }
@@ -88,93 +98,142 @@ button {
   grid-column: 3/ span 1;
   width: 100%;
   overflow: hidden;
-  padding-top: 3px;
+  padding-top: 1px;
   padding-left: 1vw;
-  float: right;
+  padding-right: 1vw;
   vertical-align: top;
   border-bottom: 0.5vh solid $line_col;
+  text-align: center;
+  
 }
 
 .header-r p {
   display: inline-block;
+  
+}
+#comInvitation{
+  text-align: center;
+  color: $summary_col;
+  font-weight: bold;
+  font-size: $font-size-main - 0.4vw;
+  
 }
 .counter{
   font-size: $font-size-counter;
+  visibility: hidden;
 }
-#comInvitation {
-  color: $summary_col;
-  font-weight: bold;
+
+#btnLogin{
+  font-size: $font-size-main - 0.4vw;
 }
+
+#btnLogout{
+   visibility: hidden;
+   font-size: $font-size-main - 0.4vw;
+}
+
 /* ==========  content ========================= */
-#content {
+#content_up{
   grid-row: 2;
+  grid-column: 1 / span 2;
+  padding-top: 0.8vh;
+  padding-left: 0.3vw;
+  width: 99%;
+  background-color: $color2;
+  color: whitesmoke;
+  z-index: 1;
+}
+#content {
+  grid-row: 3;
   grid-column: 1 / span 2;
   padding-top: 0.5em;
   padding-left: 0.5em;
   padding-right: 0.2em;
   display: flex;
   flex-wrap: wrap;
-  height: 2.5vh;
+  z-index: 0;
+  
   }
 
 
 /* ======================  inputs ===================================================== */
-#depDate, #lab_depDate, #lab_dest, #labelNumPas, #inputPas, #inputBag_lab,#inputBag {
-  margin-left: $margin_std;
+ #lab_depDate, #lab_dest, #labelNumPas {
+  padding-left: $padding_left_std;
+  border-radius: 6px;
 }
+#lab_dep_airport {
+  padding-left: $padding_left_std;
+
+}
+#inputPas{
+  padding-left: $padding_left_std + 2vw;
+}
+#bag{
+  padding-left: $padding_left_std + 0.2vw;
+}
+#inputBag{
+  border-radius: 6px;
+  padding-left: $padding_left_std;
+}
+
 label, form {
-  z-index: 1;
+  z-index: 0;
 }
-/* --- miejsca wylotu i destynacja --- */
+
 select {
   width: auto;
+  min-width: 3vw;
   font-size: $font-size-main;
   font-weight: bold;
   margin-left: 0.2vw;
+  border-radius: 6px;
+  height: $font-size-main + 0.3vw;
   }
-/* --- data wylotu , ilość pasażerów ---- */
-input {
-  margin-left: $margin_std;
+
+  input {
   font-size: $font-size-main;
-  height: 1vw;
+  height: $font-size-main + 0.3vw; 
   width: auto;
   font-weight: bold;
+  border-radius: 6px;
   
 }
  #pasDisplay{
   width: 2vw;
-  height: 1vw;
+  height: $font-size-main + 0.3vw;
   font-size: $font-size-main;
   font-weight: bold;
   
  }
- #inputBag {
-  width: 2vw;
-  height: 1vw;
-  font-size: $font-size-main;
-  font-weight: bold;
+ #inputBag{
+  height: $font-size-main + 0.7vw;
+  width: 4vw;
  }
-
-
 /* ==========  sidebar ========================= */
 .sidebar {
-  grid-row: 2;
+  grid-row: 2/ span 2;
   grid-column: 3/ span 1;
   
   padding-left: 1vw;
   text-align: left;
   color: black;
   word-wrap: normal;
-  font-size: $font-size-main;
-
+  font-size: $font-size-summ;
   background-color: whitesmoke;
+}
+#comm_cart, #comm_warning1{
+  font-size: $font-size-summ;
 }
 
 #btnConfirm {
   margin-top: 0.6vh;
-  width: 70%;
-  margin-left: 15%;
-  padding: 0 1vw;
+  width: 90%;
+  margin-left: 5%;
+  padding: 0 0.3vw;
+  background-color: red;
+  color: white;
+  font-size: $font-size-summ;
+  height: $font-size-summ + 0.6vw;
   
 }
 #summary{
@@ -198,72 +257,109 @@ padding-left: 0.5vw;
 .blue{
   color: blue;
   font-weight: bold;
-  font-size: $font-size-main + 0.2vw;
+  font-size: $font-size-summ + 0.3vw;
+  
 }
 .sumPass{
   font-weight: normal;
-  font-size: $font-size-main - 0.05vw;
+  font-size: $font-size-summ - 0.05vw;
   font-style: italic;
-}
+  }
 
 #outputTotal {
   font-weight: bold;
-  font-size: $font-size-main + 0.2vw;
+  font-size: $font-size-summ + 0.3vw;
   background: #B3BAC7;
 }
 
 /* ==========  footer ========================= */
 .footer {
-  grid-row: 3;
+  grid-row: 4;
   grid-column: 1 /span 3;
   text-align: center;
   vertical-align: center;
   padding-top: 0.5vh;
   border-top: 0.5vh solid $line_col;
- 
+  font-size: $font-size-main - 0.4vw;
  
 }
 /* ================ form passengers ================ */
 
 .pas_window{
-  visibility: hidden;
-  width: 13vw;
+  display: none;
+  width: 33vw;
   height: auto;
   background-color: lightgrey;
+  float: left;
   position: relative;
-  float: right;
-  top: 0.8vw;
-  left: 0px;
-  padding: 0.4vw;
-  z-index: 1;
+  top: 0vh;
+  left: 0vw;
+  padding: 1.2vw;
+  z-index: 2;
   cursor: pointer;
   font-size: $font-size-main;
- 
+  color: $color2;
 }
-
 .pas_window select{
   margin-top: 0.7vh;
   width: 1.8vw;
-  
 }
-
 
 .pas_window label{
   float: left;
 }
-#inputPas{
-margin-left: $margin_std;
 
-}
-#btnPas{
+.btnFormPas .cameraDown{
+  position: relative;
+  top: -2vw;
+  left: 12vw;
   width: 2vw;
-  height: auto;
-  font-size: $font-size-main + 0.4vw;
+  height: 2vw;
+  cursor: pointer;
+  background: #cccccc;
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
 }
+
+.cameraUp{
+  position: relative;
+  top: -2vw;
+  left: 12vw;
+  width: 2vw;
+  height: 2vw;
+  cursor: pointer;
+  background: #cccccc;
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
+}
+
+.btnFormPas .cameraDown:before {
+content:"";   
+position: relative; 
+top:90%;
+left:10%;
+ width: 0;
+ height: 0;
+  border-top: 1.3vw solid $color2;
+  border-left: 0.7vw solid transparent;
+  border-right: 0.7vw solid transparent;
+}
+.btnFormPas .cameraUp:before {
+  content:""; 
+  position: relative; 
+  top: -50%;
+  left:10%;
+  width: 0;
+  height: 0;
+  border-bottom: 1.3vw solid $color2;
+  border-left: 0.7vw solid transparent;
+  border-right: 0.7vw solid transparent;
+}
+
 
 /* ========================= form login ======================== */
 .login_window {
-  visibility: hidden;
+  display: none;
   width: 75vw;
   height: 84vh;
   background-color: lightgrey;
@@ -271,24 +367,41 @@ margin-left: $margin_std;
   cursor: pointer;
   font-weight: bold;
   top: 30px;
-  left: 20px;
+  left: 22px;
   padding: 30px 0 0 50px;
   z-index: 1;
+  color: black;
 }
-
+#btn2{
+  font-size: $font-size-main - 0.3vw;
+  height: $font-size-main + 0.5vw;
+}
+#btnCan1{
+  font-size: $font-size-main - 0.3vw;
+  height: $font-size-main + 0.5vw;
+  color: $color_warn;
+  margin-left: 3vw;
+}
 .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
+  display: block;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
+}
+.show_2{
+    visibility: visible;
+    -webkit-animation: fadeIn 0.3s;
+    animation: fadeIn 0.3s;
 }
 .warn{
-color: red;
+color: $color_warn;
 }
-
+.hidden{
+ display: none;
+}
 .hide_form {
-  visibility: hidden;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
+  display: none;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -308,7 +421,7 @@ color: red;
     opacity: 1;
   }
 }
-/* -- komunikat na formularzu logowania --- */
+/* -- communicate on login form --- */
 .comm {
   background-color: transparent;
   margin-left: $margin_std;
@@ -320,117 +433,242 @@ color: red;
 
 
 @media screen and (min-width: 376px) and (max-width: 600px) {
-      body{
-        font-size: $font-size-mobile;
-      }
-      .layout {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 9vh 68vh auto 4vh;
-        
-      }
-      
-      /* ===== header mobile ==================== */
-      .header-l, .header-c, .header-r, .header-r p {
-        grid-column: 1;
-        grid-row: 1;
-        display: block;
-      
-        overflow: hidden;
-        padding-top: 0vh;
-        vertical-align: top;
-      }
-      .header-l{
-        display: none;
-      }
-      .header-c{
-        font-size: $font-size-mobile;
-      }
-      #counter, #counter_label{
-        display: none;
-        
-      }
-      .btn1{
-        font-size: $font-size-mobile;
-        margin-top: 1.5vh;
-        width: auto;
-      }
-      /* ==========  content ========================= */
-      #content {
-        grid-column: 1;
-        grid-row: 2;
-        display: block;
-        }
-      select{
-        width: auto;
-        height: 3vw;
-        font-size: $font-size-mobile;
-        margin-top: $margin_std;
-        margin-left: $margin_std;
-        size: 2;
-      }
-      input {
-        margin-top: $margin_std;
-        height: 3vw;
-        font-size: $font-size-mobile;
-      }
-
-      #inputPas{
-        margin-top: $margin_std;
-        width: 3vw;
-        height: 3vw;
-        font-size: $font-size-mobile;
-        display: inline;
-      }
-
-    #numPas {
-      width: 9vw;
-      height: 3vw;
-    }
-    #btnPas{
-      font-size: $font-size-mobile + 1vw;
-      text-align: center;
-      width: 3vw;
-    }
-    #inputBag{
-      width: 7vw;
-      height: $font-size-mobile + 1vw;
+    body{
       font-size: $font-size-mobile; 
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 9vh 14vh 60vh auto 2vh;
+    }
+
+    /* ===== header mobile ==================== */
+    .header-l, .header-c, .header-r, .header-r p {
+      grid-column: 1;
+      grid-row: 1;
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      padding-top: 0vh;
+      vertical-align: top;
+    }
+    .header-l{
+      display: none;
+    }
+    .header-c{
+      font-size: $font-size-mobile; 
+    }
+    #counter, #counter_label{
+      display: none;
+
+    }
+    .btn1{
+      font-size: $font-size-mobile; 
+      height: auto ;
+      margin-top: 1.5vh;
+      width: auto;
+
       }
 
-      /* ==========  sidebar ========================= */
-      .sidebar {
-        grid-column: 1;
-        grid-row: 3;
-        font-size: $font-size-mobile - 0.3vw;
-        vertical-align: top;
+      #btnLogin{
+        font-size: $font-size-mobile - 0.4vw;
       }
-      #btnConfirm {
-        margin-top: $margin_std;
-        align-content: center;
+      
+      #btnLogout{
+         visibility: hidden;
+         font-size: $font-size-mobile - 0.4vw;
       }
-      #outputTotal {
-        font-size: $font-size-mobile;
-      }
-      /* ==========  footer ========================= */
-      .footer {
-        grid-column: 1;
-        grid-row: 4;
+      #comInvitation{
+        font-size: $font-size-mobile - 0.4vw ;
         
       }
 
- } 
+    /* ==========  content ========================= */
+    #content_up {
+      grid-column: 1 span 1;
+      grid-row: 2;
+      width: 100%;
+      }
+
+    select{
+      width: auto;
+      height: auto;
+      font-size: $font-size-mobile; 
+      margin-top: $margin_std_mobile;
+      margin-left: $margin_std_mobile;
+      size: 2;
+      
+    }
+    
+    input {
+      margin-top: $margin_std_mobile;
+      height: $font-size-mobile + 1vw; 
+      font-size: $font-size-mobile; 
+    }
+
+    #inputPas{
+      margin-top: $margin_std_mobile;
+      width: 3vw;
+      height: $font-size-mobile + 1vw; 
+      font-size: $font-size-mobile; 
+      display: inline;
+    }
+
+  #numPas {
+    width: 9vw;
+    height: $font-size-mobile + 1vw; 
+  }
+  #btnPas{
+    font-size: $font-size-mobile + 1vw; 
+    text-align: center;
+
+  }
+
+  #pasDisplay{
+    width: 2vw;
+    height: $font-size-mobile + 1vw; 
+    font-size: $font-size-mobile;
+  }
+
+  #inputBag{
+    width: 9vw;
+    height: $font-size-mobile + 1vw; 
+    font-size: $font-size-mobile;
+  }
+
+  .btnFormPas .cameraDown{
+    position: relative;
+    top: -5vw;
+    left: 23vw;
+    width: 3.8vw;
+    height: 3.8vw;
+    cursor: pointer;
+    background: #cccccc;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+  }
+  
+  .cameraUp{
+    position: relative;
+    top: -5vw;
+    left: 23vw;
+    width: 3.8vw;
+    height: 3.8vw;
+    cursor: pointer;
+    background: #cccccc;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+  }
+  
+  .btnFormPas .cameraDown:before {
+  content:"";   
+  position: relative; 
+  top:90%;
+  left:7%;
+   width: 0;
+   height: 0;
+    border-top: 3vw solid $color2;
+    border-left: 1.7vw solid transparent;
+    border-right: 1.7vw solid transparent;
+  }
+  .btnFormPas .cameraUp:before {
+    content:""; 
+    position: relative; 
+    top: -100%;
+    left:10%;
+    width: 0;
+    height: 0;
+    border-bottom: 3vw solid $color2;
+    border-left: 1.7vw solid transparent;
+    border-right: 1.7vw solid transparent;
+  }
+  
+
+
+
+  .pas_window{
+    width: 52vw;
+    height: auto;
+    position: relative;
+    top: 2vh;
+    left: 2vw;
+    padding: 1.2vw;
+    z-index: 2;
+    cursor: pointer;
+    font-size: $font-size-mobile;
+    color: $color2;
+  }
+  #form_pas table tr td select{
+    width: 9vw;
+   }
+
+  #btn2, #btnCan1{
+    font-size: $font-size-mobile; 
+    height: $font-size-mobile + 2vw;
+  }
+
+// ============  airplane display ==========
+    #content {
+      grid-column: 1;
+      grid-row: 3;
+      display: block;
+      }
+  /* ==========  sidebar ========================= */
+  .sidebar {
+    grid-column: 1;
+    grid-row: 4;
+    font-size: $font-size-mobile - 0.3vw; 
+    vertical-align: top;
+    text-align: center;
+  }
+  #btnConfirm {
+    margin-top: $margin_std;
+    align-content: center;
+    font-size: $font-size-mobile; 
+    width: 50%;
+    height: $font-size-mobile + 2vw;
+  }
+  #outputTotal {
+    font-size: $font-size-mobile;
+  }
+  .sidebar table{
+    width: 90%;
+    margin: 2vw auto;
+    font-size: $font-size-mobile - 0.3vw;
+  }
+  #comm_cart, #comm_warning1{
+    font-size: $font-size-mobile;
+  }
+  .sumPass{
+    font-size: $font-size-mobile - 0.5vw;
+        }
+  .blue{
+    font-size: $font-size-mobile - 0.3vw;
+    
+  }
+  /* ==========  footer ========================= */
+  .footer {
+    grid-column: 1;
+    grid-row: 5;
+    font-size: $font-size-mobile - 0.3vw;
+  }
+}
  
  /* ============================   max-width: 375px          ========================= */
  @media screen and (max-width: 375px){
         body{
           font-size: $font-size-mobile; 
+          margin-left: 0;
+          margin-right: 0;
+          text-align: center;
         }
         .layout {
           display: grid;
           grid-template-columns: 100%;
-          grid-template-rows: 9vh 68vh auto 4vh;
-
+          grid-template-rows: 9vh 14vh 60vh auto 2vh;
         }
 
         /* ===== header mobile ==================== */
@@ -455,33 +693,51 @@ color: red;
         }
         .btn1{
           font-size: $font-size-mobile; 
+          height: auto ;
           margin-top: 1.5vh;
           width: auto;
 
           }
-        /* ==========  content ========================= */
-        #content {
-          grid-column: 1;
-          grid-row: 2;
-          display: inline;
+
+          #btnLogin{
+            font-size: $font-size-mobile - 0.4vw;
           }
+          
+          #btnLogout{
+             visibility: hidden;
+             font-size: $font-size-mobile - 0.4vw;
+          }
+          #comInvitation{
+            font-size: $font-size-mobile - 0.4vw ;
+            
+          }
+
+        /* ==========  content ========================= */
+        #content_up {
+          grid-column: 1 span 1;
+          grid-row: 2;
+          display: inline-block;
+          width: 100%;
+          }
+
         select{
           width: auto;
-          height: 3vw;
+          height: auto;
           font-size: $font-size-mobile; 
-          margin-top: $margin_std;
-          margin-left: $margin_std;
+          margin-top: $margin_std_mobile;
+          margin-left: $margin_std_mobile;
           size: 2;
+          
         }
         
         input {
-          margin-top: $margin_std;
+          margin-top: $margin_std_mobile;
           height: $font-size-mobile + 1vw; 
           font-size: $font-size-mobile; 
         }
 
         #inputPas{
-          margin-top: $margin_std;
+          margin-top: $margin_std_mobile;
           width: 3vw;
           height: $font-size-mobile + 1vw; 
           font-size: $font-size-mobile; 
@@ -497,30 +753,132 @@ color: red;
         text-align: center;
 
       }
-      #inputBag{
-        width: 7vw;
+
+      #pasDisplay{
+        width: 2vw;
         height: $font-size-mobile + 1vw; 
-        font-size: $font-size-mobile; 
-        }
+        font-size: $font-size-mobile;
+      }
+
+      #inputBag{
+        width: 12vw;
+        height: $font-size-mobile + 1vw; 
+        font-size: $font-size-mobile;
+      }
+      .btnFormPas .cameraDown{
+        position: relative;
+        top: -5vw;
+        left: 23vw;
+        width: 3.8vw;
+        height: 3.8vw;
+        cursor: pointer;
+        background: #cccccc;
+        border-radius: 5px;
+        border: 1px solid #aaaaaa;
+      }
       
+      .cameraUp{
+        position: relative;
+        top: -5vw;
+        left: 23vw;
+        width: 3.8vw;
+        height: 3.8vw;
+        cursor: pointer;
+        background: #cccccc;
+        border-radius: 5px;
+        border: 1px solid #aaaaaa;
+      }
+      
+      .btnFormPas .cameraDown:before {
+      content:"";   
+      position: relative; 
+      top:90%;
+      left:7%;
+       width: 0;
+       height: 0;
+        border-top: 3vw solid $color2;
+        border-left: 1.7vw solid transparent;
+        border-right: 1.7vw solid transparent;
+      }
+      .btnFormPas .cameraUp:before {
+        content:""; 
+        position: relative; 
+        top: -100%;
+        left:10%;
+        width: 0;
+        height: 0;
+        border-bottom: 3vw solid $color2;
+        border-left: 1.7vw solid transparent;
+        border-right: 1.7vw solid transparent;
+      }
+
+      .pas_window{
+        width: 52vw;
+        height: auto;
+        position: relative;
+        top: 2vh;
+        left: 2vw;
+        padding: 1.2vw;
+        z-index: 2;
+        cursor: pointer;
+        font-size: $font-size-mobile;
+        color: $color2;
+      }
+      #form_pas table tr td select{
+        width: 9vw;
+       }
+
+      #btn2, #btnCan1{
+        font-size: $font-size-mobile; 
+        height: $font-size-mobile + 2vw;
+      }
+.cell_align{
+  padding-top: 2vw; text-align: left; padding-left: 3vw;
+}
+// ============  airplane display ==========
+        #content {
+          grid-column: 1;
+          grid-row: 3;
+          display: block;
+          }
       /* ==========  sidebar ========================= */
       .sidebar {
         grid-column: 1;
-        grid-row: 3;
+        grid-row: 4;
         font-size: $font-size-mobile - 0.3vw; 
         vertical-align: top;
+        text-align: center;
       }
       #btnConfirm {
         margin-top: $margin_std;
         align-content: center;
+        font-size: $font-size-mobile; 
+        width: 50%;
+        height: $font-size-mobile + 2vw;
       }
       #outputTotal {
         font-size: $font-size-mobile;
       }
+      .sidebar table{
+        width: 90%;
+        margin: 2vw auto;
+        font-size: $font-size-mobile - 0.3vw;
+      }
+      #comm_cart, #comm_warning1{
+        font-size: $font-size-mobile;
+      }
+      .sumPass{
+        font-size: $font-size-mobile - 0.5vw;
+            }
+      .blue{
+        font-size: $font-size-mobile - 0.3vw;
+        
+      }
       /* ==========  footer ========================= */
       .footer {
         grid-column: 1;
-        grid-row: 4;
+        grid-row: 5;
+        font-size: $font-size-mobile - 0.3vw;
       }
 }
  /*koniec mobile */

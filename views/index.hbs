@@ -7,19 +7,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Grzegorz Łuska">
   <title>System rezerwacji lotów</title>
-  <link rel="stylesheet" type="text/css" href="./../assets/scss/logout.css">
+  
+  
   <link rel="stylesheet" type="text/css" href="./../assets/scss/airplanes.css">
   <link rel="stylesheet" type="text/css" href="./../assets/scss/main.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap"> 
-  {{!-- <link rel="shortcut icon" type="image/png" sizes="32x32" href="./../views/plane.png"/> --}}
+  
+    
 </head>
 
 <body>
   <div class="layout">
     <!-- *************************************************header **************************************** -->
   <div class="header-l">
-    <img src="./../assets/images/jet10.png" alt="jet" width="90%" height="auto">
+    <img src="./../assets/images/jet10.png" alt="jet"  width="90%"  height="auto">
   </div>
   <div class="header-c">
     SYSTEM REZERWACJI LOTÓW
@@ -27,52 +27,78 @@
 
   <div id="header-r" class="header-r">
     <p id="counter_label" class="counter">Session timer: </p><p id="counter" class="counter"></p><br>
-    <p id="comInvitation" class="comm2"></p>
-     <input type="button" value="Logowanie" id="btnLogin" class="btn1"><br>
+    <div id="comInvitation" class="comm2"></div> 
+     <input type="button" value="Logowanie" id="btnLogin" class="btn1">
+     <input type="button" value="Wyloguj" id="btnLogout" class="btn1" >
   </div>
    
     <!-- **************************************************content******************************************* -->
-<div id="content">
+<div id="content_up" >
+  <section style="display: table; ">
+    <div style="display: table-row">
+      <section style="display: table-cell; width: 40%; " >
+        <label for="dep_airport" id="lab_dep_airport" >Miejsce wylotu:
 
-  <label for="dep_airport">Miejsce wylotu:
+          <select id="dep_airport" required>
+            <option value="blank"></option>
+            <option value="WAW">Warszawa(WAW)</option>
+            <option value="KRA">Kraków(KRK)</option>
+            <option value="KTW">Katowice(KTW)</option>
+            <option value="WRO">Wrocław(WRO)</option>
+          </select>
+        </label>
+      </section>
+      <section style="display: table-cell; width: 30%; ">
+        <label for="destinations" id="lab_dest" required>Cel podróży:
+        <select id="destinations">
+          <option value="blank"></option>
+          <option value="GDN">Gdańsk(GDN)</option>
+          <option value="CDG">Paryż(CDG)</option>
+          <option value="JFK">Nowy Jork(JFK)</option>
+        </select>
+        </label>
+    </section>
+    <section style="display: table-cell; width: 30%; ">
+        {{!-- ---------- choosing date of departure --------------- --}}
+        <form>
+          <label for="depDate" id="lab_depDate">Data wylotu:
+            <input type="date" name="depDate" id="depDate" required>
+          </label>
+        </form>
+    </section>
+  </div>
 
-  <select id="dep_airport" required>
-    <option value="blank"></option>
-    <option value="WAW">Warszawa(WAW)</option>
-    <option value="KRA">Kraków(KRK)</option>
-    <option value="KTW">Katowice(KTW)</option>
-    <option value="WRO">Wrocław(WRO)</option>
-   </select>
-</label>
-<label for="destinations" id="lab_dest" required>Cel podróży:
 
-<select id="destinations">
-  <option value="blank"></option>
-  <option value="GDN">Gdańsk(GDN)</option>
-  <option value="CDG">Paryż(CDG)</option>
-  <option value="JFK">Nowy Jork(JFK)</option>
- </select>
- </label>
-{{!-- ---------- choosing date of departure --------------- --}}
-<form>
-  <label for="depDate" id="lab_depDate">Data wylotu:
-    <input type="date" name="depDate" id="depDate" required>
-  </label>
-</form>
+    <div  style="display: table-row; ">
+      <section id="inputPas" style="display: table-cell; width: 40%;   text-align: left; padding-top: 2vw; " >
+        <span>Ilość pasażerów:</span>
+        <input type="text" id="pasDisplay" name="pasDisplay"  value="1" readonly>
+        <div class="btnFormPas" id="btnPas">
+            <div class="cameraDown" id="camera"></div>
+        </div> 
+    </section>
+    <section id="bag" style="display: table-cell; width: 30%; ; text-align: left; " > 
+      {{!-- --- baggage choice  --}}
+      <label for="inputBag" id="inputBag_lab" required>Dodatkowy bagaż:
+          <select id="inputBag">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+      </label>
+
+    </section>  
+  </div>
+</section>
 
 
-<div id="inputPas">
-     <span>Ilość pasażerów:</span>
-     <input type="text" id="pasDisplay" name="pasDisplay"  readonly>
-     <button id="btnPas">&#8681</button><br>
-     
-     
-      <div class="pas_window" id="form_pas">
+<div class="pas_window" id="form_pas">
         <table>
           <tr>
             <td><label for="adt_pas">Dorośli (pow 16 lat): </label></td>
             <td>
-                    <select id="adt_pas" >
+                    <select id="adt_pas" class="pas_select">
                       <option value="0">0</option>
                       <option value="1" selected>1</option>  {{!-- -- domyślna wartość --}}
                       <option value="2">2</option>
@@ -89,7 +115,7 @@
                 <tr>
                   <td><label for="teen_pas">Nastolatkowie (od 12 do 15 lat): </label></td>
                   <td>
-                    <select id="teen_pas">
+                    <select id="teen_pas" class="pas_select">
                       <option value="0">0</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -107,7 +133,7 @@
                 <tr>
                   <td><label for="kid_pas">Dzieci (od 2 do 11 lat): </label></td>
                   <td>
-                    <select id="kid_pas">
+                    <select id="kid_pas" class="pas_select">
                       <option value="0">0</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -122,9 +148,9 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><label for="inf_pas">Niemowlęta (od 0 do 24 m-cy): </label></td>
+                  <td><label for="inf_pas" >Niemowlęta (od 0 do 24 m-cy): </label></td>
                   <td>
-                    <select id="inf_pas">
+                    <select id="inf_pas" class="pas_select">
                       <option value="0">0</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -142,17 +168,6 @@
 
     <p id="commPas"></p>
   </div>
-</div>
-{{!-- --- baggage choice  --}}
- 
-<label for="inputBag" id="inputBag_lab" required>Dodatkowy bagaż:
-      <select id="inputBag">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
- </label><br>
 
  {{!-- login form --}}
  <div class="login_window" id="Popup_form">
@@ -161,12 +176,17 @@
   <label for="inputPW">Podaj hasło: </label>
   <input type="password" name="inputPW" id="inputPW" placeholder="hasło"><br><br>
   <input type="submit" value="Zaloguj się" id="btn2" class="btn1" > 
+  <input type="button" value="Anuluj" id="btnCan1" class="btn1" > 
+  
   <p id="comValidation" class="comm"></p>
   
- 
+</div>
 </div>
 
-<div id="Bombardier" class="hidden">
+
+
+<div id="content">
+<div id="Bombardier" class="hidden_plane">
 
  <svg
   xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -3522,7 +3542,7 @@
    </svg>
 
 </div> 
- <div id="B737" class="hidden">
+ <div id="B737" class="hidden_plane">
   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     viewBox="0 0 3850 1100" style="enable-background:new 0 0 3850 1100;" xml:space="preserve">
 
@@ -6570,7 +6590,7 @@
   </svg>
 
 </div>
-<div id="B757" class="hidden">
+<div id="B757" class="hidden_plane">
 
       <svg id="_757-200_752__16-153_v1" data-name="757-200 (752)_16-153 v1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3850 1100">
@@ -6590,7 +6610,6 @@
           </clipPath>
         </defs>
 
-        <title>Resized aircraft seat images</title>
         <g class="cls-2">
           <rect class="cls-3" x="86.28" y="424.55" width="3476.18" height="426.53" />
           <rect class="cls-4" x="77.35" y="980.04" width="3495.35" height="0.56" />
@@ -8016,7 +8035,7 @@
           points="1957.43 598.33 1924.23 598.33 1924.23 565.12 1957.43 565.12 1957.43 598.33 1957.43 598.33" />
         <polygon id="E21_B" class="freeEP_757"
           points="1957.43 545.21 1924.23 545.21 1924.23 511.99 1957.43 511.99 1957.43 545.21 1957.43 545.21" />
-        <polygon id="E21_B" class="freeEP_757"
+        <polygon id="F21_B" class="freeEP_757"
           points="1957.43 492.08 1924.23 492.08 1924.23 458.87 1957.43 458.87 1957.43 492.08 1957.43 492.08" />
   </g>
 

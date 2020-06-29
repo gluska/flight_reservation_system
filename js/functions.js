@@ -21,9 +21,9 @@ export const reservation = (jet) => {
 
     for(var i=0;i<list.length;i++){
     list[i].addEventListener("click", function() {
-        var numPer = document.getElementById("pasDisplay").value;
-        var seatNum = this.getAttribute('id');
-        var btnChecked = document.getElementById(seatNum);
+        const numPer = document.getElementById("pasDisplay").value;
+        const seatNum = this.getAttribute('id');
+        const btnChecked = document.getElementById(seatNum);
         
         if (!arrSeats.includes(seatNum) && arrSeats.length<numPer && arrSeats.length<9) {
             arrSeats.push(seatNum);
@@ -54,7 +54,7 @@ export const reservation = (jet) => {
 };
 //===================  listening to change  data  ===================================
 
-var numAdt = 0;
+var numAdt = 1;
 var numTeens = 0;
 var numKids = 0;
 var numInf = 0;
@@ -80,4 +80,30 @@ export const listenToChange = () =>{
 
 }
 
+
+// ======================   automatic log out  =========================
+var logoutTime = 180000;//initial counter value 3 min
+
+
+export const logout = () =>{
+    const countdown = setInterval(function()  {
+      if(logoutTime>0)
+      {
+        logoutTime = logoutTime-1000;//descend 1 sec
+        document.getElementById("counter").innerHTML = logoutTime/1000+' sec';
+      }
+      else
+      {
+        clearInterval(countdown);//moment t=0, stopping the countdown
+        location.href='/logout';
+        document.getElementById("counter").innerHTML = logoutTime;
+      }
+    
+    const resetLogOutTime = () => { logoutTime = 180000};
+
+    document.onmousemove = resetLogOutTime;
+    document.onkeydown   = resetLogOutTime;
+    }, 1000); //execute function every 1 sec
+    };
+  
 export {arrSeats, numAdt, numTeens, numKids, numInf, sumPas};

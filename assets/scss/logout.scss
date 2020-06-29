@@ -1,6 +1,6 @@
 
 $font-size-main: 1.5vw;
-
+$font-size-mobile: 2.8vw;
 
 body {
   background-color: #B2EEF3;
@@ -27,4 +27,18 @@ a:hover {
 /* selected link */
 a:active {
   font-weight: bold;
+}
+
+/* ============================   max-width: 600px          ========================= */
+@media screen and (max-width: 600px){
+  body {
+    font-size: $font-size-mobile;
+    width: 80%;
+    margin: 10vw auto;
+    text-align: center;
+  }
+  a:hover {
+    font-size: $font-size-mobile + 0.1vw;
+  }
+
 }

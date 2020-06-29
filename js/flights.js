@@ -1,59 +1,66 @@
-import {reservation, listenToChange, arrSeats, numAdt, numTeens, numKids, numInf, sumPas} from './functions.js';
+import {reservation, listenToChange, arrSeats} from './functions.js';
 
-// var arrSeats = [];
 
 var selectedJet; //mapping destinations to an airplane
 document.getElementById("destinations").addEventListener("change", () => {
-var choiceDest = document.getElementById("destinations").value; //wybór destynacji
+const choiceDest = document.getElementById("destinations").value; //destination choose
 if (choiceDest === "GDN") {selectedJet="Bom"} 
 else if (choiceDest === "CDG") {selectedJet="B737"} 
 else if (choiceDest === "JFK") {selectedJet="B757"} 
 });
 
-// ==========================     support for destination select      =====================================================================
+// ==========================     support for destination select   ==========================================
 var depTime = "";
 var destTime = "";
 document.getElementById("destinations").addEventListener("change", function() {
-    var choiceDest = document.getElementById("destinations").value; 
-    var country = document.getElementById("Bombardier");
-    var continental = document.getElementById("B737");
-    var interContinental = document.getElementById("B757");
+    const choiceDest = document.getElementById("destinations").value; 
+    const country = document.getElementById("Bombardier");
+    const continental = document.getElementById("B737");
+    const interContinental = document.getElementById("B757");
     
 //----flight to Gdansk
     if (choiceDest === "GDN"){
-        country.classList.remove("hidden");
-        country.classList.add("visible");
-        continental.classList.remove("visible");
-        continental.classList.add("hidden");
-        interContinental.classList.remove("visible");
-        interContinental.classList.add("hidden");
+        country.classList.remove("hidden_plane");
+        country.classList.add("visible_plane");
+        continental.classList.remove("visible_plane");
+        continental.classList.add("hidden_plane");
+        interContinental.classList.remove("visible_plane");
+        interContinental.classList.add("hidden_plane");
         depTime = "09:25";
         destTime = "11:10";
         reservation('Bombardier');
     } 
     //----flight to Paris
     else if (choiceDest === "CDG"){
-        country.classList.remove("visible");
-        country.classList.add("hidden");
-        continental.classList.remove("hidden");
-        continental.classList.add("visible");
-        interContinental.classList.remove("visible");
-        interContinental.classList.add("hidden");
+        country.classList.remove("visible_plane");
+        country.classList.add("hidden_plane");
+        continental.classList.remove("hidden_plane");
+        continental.classList.add("visible_plane");
+        interContinental.classList.remove("visible_plane");
+        interContinental.classList.add("hidden_plane");
         depTime = "07:10";
         destTime = "11:15";
         reservation('B737');
     }
     //----flight to New York
     else if (choiceDest === "JFK"){
-        country.classList.remove("visible");
-        country.classList.add("hidden");
-        continental.classList.remove("visible");
-        continental.classList.add("hidden");
-        interContinental.classList.remove("hidden");
-        interContinental.classList.add("visible");
+        country.classList.remove("visible_plane");
+        country.classList.add("hidden_plane");
+        continental.classList.remove("visible_plane");
+        continental.classList.add("hidden_plane");
+        interContinental.classList.remove("hidden_plane");
+        interContinental.classList.add("visible_plane");
         depTime = "05:25";
         destTime = "20:30";
         reservation('B757');
+    }
+    else if (choiceDest === "blank"){
+        country.classList.remove("visible_plane");
+        country.classList.add("hidden_plane");
+        continental.classList.remove("visible_plane");
+        continental.classList.add("hidden_plane");
+        interContinental.classList.remove("visible_plane");
+        interContinental.classList.add("hidden_plane");
     }
 });
 //=======================   event listeners =================
@@ -97,12 +104,11 @@ document.getElementById("comm_cart").innerText = "";
 fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/baggage.json")
         .then((resp) => resp.json()) // transform the data into json
         .then(function (data) {
-            let inputBagQuan = document.getElementById("inputBag").value;
+            const inputBagQuan = document.getElementById("inputBag").value;
             console.log(inputBagQuan);
             bag_prices = data.filter(el => el.jet === selectedJet && el.bagQuan === inputBagQuan); 
             bagPrice = (inputBagQuan == "0") ? "0.00" : bag_prices[0].price;
-            
-            
+                        
             });
       
         fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/seats.json") 
@@ -123,32 +129,29 @@ fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master
             totalPrice = 0;
             })
         .then(()=> {
-            let res_seat_output = arrSeats.join(", ");
-            let numTickets = arrSeats.length;
-            let adt_pas = document.getElementById('adt_pas').value;
-            let teen_pas = document.getElementById('teen_pas').value;
-            let kid_pas = document.getElementById('kid_pas').value;
-            let inf_pas = document.getElementById('inf_pas').value;
-            let visAdt = document.getElementById('sumAdt');
-            let visTeens = document.getElementById('sumTeens');
-            let visKid = document.getElementById('sumKid');
-            let visInf = document.getElementById('sumInf');
-            let inputBagQuan = document.getElementById("inputBag").value;
-            // for (var i in jet_prices) {
-            //     totalPrice += parseFloat(jet_prices[i].price); 
-            // };
-            
-            totalPrice = parseInt(adt_pas) * standardPrice+parseInt(teen_pas)*teensPrice+parseInt(kid_pas)*kidPrice+parseInt(inf_pas)*infPrice+parseInt(bagPrice);
-            totalPriceFix = totalPrice.toFixed(2); //roundeing to 2 decimal places
-
+            const res_seat_output = arrSeats.join(", ");
+            const numTickets = arrSeats.length;
+            const adt_pas = document.getElementById('adt_pas').value;
+            const teen_pas = document.getElementById('teen_pas').value;
+            const kid_pas = document.getElementById('kid_pas').value;
+            const inf_pas = document.getElementById('inf_pas').value;
+            const visAdt = document.getElementById('sumAdt');
+            const visTeens = document.getElementById('sumTeens');
+            const visKid = document.getElementById('sumKid');
+            const visInf = document.getElementById('sumInf');
+            const inputBagQuan = document.getElementById("inputBag").value;
+     
+            //.toFixed(2) -> rounding to 2 decimal places; '+' changes string into number
+            totalPrice = (+(parseInt(adt_pas) * standardPrice).toFixed(2))+(+(parseInt(teen_pas) *teensPrice).toFixed(2))+(+(parseInt(kid_pas)*kidPrice).toFixed(2))+(+(parseInt(inf_pas)*infPrice).toFixed(2))+parseFloat(bagPrice);
+            totalPriceFix = totalPrice.toFixed(2); 
 
             if(adt_pas === "0") {visAdt.style.visibility = "hidden";} {visAdt.style.visibility="visible";};
             if(teen_pas === "0") {visTeens.style.visibility = "hidden";} else {visTeens.style.visibility = "visible";};
             if(kid_pas === "0") {visKid.style.visibility = "hidden";} else {visKid.style.visibility ="visible";};
             if(inf_pas === "0") {visInf.style.visibility = "hidden";} else {visInf.style.visibility ="visible";};
             if(inputBagQuan == "0") {document.getElementById('bag_info_line').style.visibility = "hidden";} {document.getElementById('bag_info_line').style.visibility = "visible";};
-            let choiceDepPl = document.getElementById('dep_airport')[document.getElementById('dep_airport').selectedIndex].innerHTML;
-            let choiceDest = document.getElementById('destinations')[document.getElementById('destinations').selectedIndex].innerHTML;
+            const choiceDepPl = document.getElementById('dep_airport')[document.getElementById('dep_airport').selectedIndex].innerHTML;
+            const choiceDest = document.getElementById('destinations')[document.getElementById('destinations').selectedIndex].innerHTML;
             console.log("to jest res_seat_output: "+res_seat_output);
 
             //outputting messages on the page- section sidebar
@@ -162,17 +165,21 @@ fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master
             document.getElementById("tarInfo").innerHTML = tarif;
             document.getElementById("tarInfo_desc").innerHTML = tarif_desc;
                         
-
             document.getElementById("numSeats").innerHTML = numTickets;
-            document.getElementById("inputAdt").innerHTML = `${adt_pas} x Osoby Dorosłe`;
-            document.getElementById("inputTeens").innerHTML = `${teen_pas} x Młodzież`;
-            document.getElementById("inputKid").innerHTML = `${kid_pas} x Dzieci`;
-            document.getElementById("inputInf").innerHTML = `${inf_pas} x Niemowlęta`;
+            // document.getElementById("inputAdt").innerHTML = `${adt_pas} x Osoby Dorosłe`;
+            // document.getElementById("inputTeens").innerHTML = `${teen_pas} x Młodzież`;
+            // document.getElementById("inputKid").innerHTML = `${kid_pas} x Dzieci`;
+            // document.getElementById("inputInf").innerHTML = `${inf_pas} x Niemowlęta`;
+
+            document.getElementById("inputAdt").innerHTML = `Osoby Dorosłe`;
+            document.getElementById("inputTeens").innerHTML = `Młodzież`;
+            document.getElementById("inputKid").innerHTML = `Dzieci`;
+            document.getElementById("inputInf").innerHTML = `Niemowlęta`;
             
-            document.getElementById("costAdt").innerHTML = `${adt_pas} x ${standardPrice} PLN`;
-            document.getElementById("costTeens").innerHTML = `${teen_pas} x ${teensPrice} PLN`;
-            document.getElementById("costKid").innerHTML = `${kid_pas} x ${kidPrice} PLN`;
-            document.getElementById("costInf").innerHTML = `${inf_pas} x ${infPrice} PLN`;
+            document.getElementById("costAdt").innerHTML = `${adt_pas} x ${standardPrice.toFixed(2)} PLN`;
+            document.getElementById("costTeens").innerHTML = `${teen_pas} x ${teensPrice.toFixed(2)} PLN`;
+            document.getElementById("costKid").innerHTML = `${kid_pas} x ${kidPrice.toFixed(2)} PLN`;
+            document.getElementById("costInf").innerHTML = `${inf_pas} x ${infPrice.toFixed(2)} PLN`;
 
             document.getElementById("res_seats").innerHTML = res_seat_output;
             document.getElementById("bag_info").innerHTML = `${bagPrice} PLN (${inputBagQuan} szt)`;
@@ -183,15 +190,15 @@ fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master
 };
 //=====================    support for button  for summary  generator  ======================================
 document.getElementById("btnConfirm").addEventListener("click", function() {
-    var el1 = document.getElementById("dep_airport");
-    var el2 = document.getElementById("destinations");
-    var el3 = document.getElementById("depDate");
-    var el4 = document.getElementById("pasDisplay").value;
-    var el5 = arrSeats.length;
+    const el1 = document.getElementById("dep_airport");
+    const el2 = document.getElementById("destinations");
+    const el3 = document.getElementById("depDate");
+    const el4 = document.getElementById("pasDisplay").value;
+    const el5 = arrSeats.length;
 
     //checking if departure has been selected
     if(el1 == null || el1.value === "blank"){
-        var com1 = document.createElement("P");               
+        const com1 = document.createElement("P");               
         com1.innerText = "Nie wybrano miejsca wylotu!"; 
         document.getElementById("comm_warning1").style.color = "red";
         document.getElementById("comm_warning1").appendChild(com1);
@@ -201,7 +208,7 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
     }
     //checking if the destination has been selected
     else if(el2 == null || el2.value === "blank"){
-        var com2 = document.createElement("P");               
+        const com2 = document.createElement("P");               
         com2.innerText = "Nie wybrano miejsca docelowego!"; 
         document.getElementById("comm_warning1").style.color = "red";
         document.getElementById("comm_warning1").appendChild(com2);
@@ -212,7 +219,7 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
     }
     //checking if the departure date has been provided
     else if(el3 == null || el3.value === ""){
-        var com3 = document.createElement("P");               
+        const com3 = document.createElement("P");               
         com3.innerText = "Nie wybrano daty wylotu!"; 
         document.getElementById("comm_warning1").style.color = "red";
         document.getElementById("comm_warning1").appendChild(com3);
@@ -222,7 +229,7 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
     }
     //validation whether max of passengers <= 9
     else if(el4 > 9){
-        var com4 = document.createElement("P");               
+        const com4 = document.createElement("P");               
         com4.innerText = "Skoryguj ilość pasażerów - max 9 osób!"; 
         document.getElementById("comm_warning1").style.color = "red";
         document.getElementById("comm_warning1").appendChild(com4);
@@ -233,7 +240,7 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
  
     //validation whether min 1 place is indicated
     else if(arrSeats.length === 0){
-        var com5 = document.createElement("P");               
+        const com5 = document.createElement("P");               
         com5.innerText = "Nie wybrano żadnego miejsca!"; 
         document.getElementById("comm_warning1").style.color = "red";
         document.getElementById("comm_warning1").appendChild(com5);
@@ -244,7 +251,7 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
 
     //validation whether the number of marked places is equal with the number of passengers
     else if(el4 != el5){
-        var com5 = document.createElement("P");               
+        const com5 = document.createElement("P");               
         com5.innerText = `Zaznacz ${el4} miejsc!`; 
         document.getElementById("comm_warning1").style.color = "red";
         document.getElementById("comm_warning1").appendChild(com5);
@@ -273,11 +280,11 @@ document.getElementById("btnConfirm").addEventListener("click", function() {
 // =====================  temporary shopping cart =============
 // 
 
-var getShoppingCart = () => {
+const getShoppingCart = () => {
     fetch("https://raw.githubusercontent.com/gluska/flight_reservation_system/master/js/baggage.json")
     .then((resp) => resp.json()) // transform the data into json
     .then(function (data) {
-        let inputBagQuan = document.getElementById("inputBag").value;
+        const inputBagQuan = document.getElementById("inputBag").value;
         console.log(inputBagQuan);
         bag_prices = data.filter(el => el.jet === selectedJet && el.bagQuan === inputBagQuan); 
         bagPrice = (inputBagQuan == "0") ? "0.00" : bag_prices[0].price;
@@ -300,27 +307,24 @@ var getShoppingCart = () => {
         kidPrice = standardPrice * 0.5;
 
         totalPrice = 0;
-        let res_seat_output = arrSeats.join(", ");
-        let numTickets = arrSeats.length;
-        let adt_pas = document.getElementById('adt_pas').value;
-        let teen_pas = document.getElementById('teen_pas').value;
-        let kid_pas = document.getElementById('kid_pas').value;
-        let inf_pas = document.getElementById('inf_pas').value;
-        let visAdt = document.getElementById('sumAdt');
-        let visTeens = document.getElementById('sumTeens');
-        let visKid = document.getElementById('sumKid');
-        let visInf = document.getElementById('sumInf');
-        let inputBagQuan = document.getElementById("inputBag").value;
+
+        const adt_pas = document.getElementById('adt_pas').value;
+        const teen_pas = document.getElementById('teen_pas').value;
+        const kid_pas = document.getElementById('kid_pas').value;
+        const inf_pas = document.getElementById('inf_pas').value;
+
         // console.log("OK")
-        totalPrice = parseInt(adt_pas) * standardPrice+parseInt(teen_pas)*teensPrice+parseInt(kid_pas)*kidPrice+parseInt(inf_pas)*infPrice+parseInt(bagPrice);
+        //.toFixed(2) -> rounding to 2 decimal places; '+' changes string into number
+        totalPrice = (+(parseInt(adt_pas) * standardPrice).toFixed(2))+(+(parseInt(teen_pas) *teensPrice).toFixed(2))+(+(parseInt(kid_pas)*kidPrice).toFixed(2))+(+(parseInt(inf_pas)*infPrice).toFixed(2))+parseFloat(bagPrice);
+        totalPriceFix = totalPrice.toFixed(2); 
+
         console.log(totalPrice);
-        totalPriceFix = totalPrice.toFixed(2); //roundeing to 2 decimal places
         document.getElementById("comm_cart").innerText = "";
         document.getElementById("comm_cart").innerText = `Aktualna wartość koszyka: ${totalPriceFix} PLN`;
         });
     };
 // ============================ listening on events - click on seat or change additional baggage ===========
-    var list_tarif = document.querySelectorAll('.freeFC_BOM,.freeEP_BOM,.freeE_BOM, .freeEP,.freeFC,.btn_economy,.freeBC_757,.freeEP_757,.btn_economy_757');
+    const list_tarif = document.querySelectorAll('.freeFC_BOM,.freeEP_BOM,.freeE_BOM, .freeEP,.freeFC,.btn_economy,.freeBC_757,.freeEP_757,.btn_economy_757');
     
     for(var i=0;i<list_tarif.length;i++){
         list_tarif[i].addEventListener("click", function() {
@@ -330,5 +334,18 @@ var getShoppingCart = () => {
     };
 
     document.getElementById("inputBag").addEventListener("change", function() {
+        getShoppingCart();
+    });
+
+    document.getElementById("adt_pas").addEventListener("change", function() {
+        getShoppingCart();
+    });
+    document.getElementById("teen_pas").addEventListener("change", function() {
+        getShoppingCart();
+    });
+    document.getElementById("kid_pas").addEventListener("change", function() {
+        getShoppingCart();
+    });
+    document.getElementById("inf_pas").addEventListener("change", function() {
         getShoppingCart();
     });

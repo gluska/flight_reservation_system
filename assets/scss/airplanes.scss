@@ -4,22 +4,26 @@
 
 
 #Bombardier {
-  position: absolute;
-  top: 50vh;
+  // position: absolute;
+  position: relative;
+  top: 20vh;
   width: 70vw;
    height: 50vh;
-  z-index: 0;
+  // width: 70%;
+  // height: 50%;
+  // z-index: 0;
   transform: scale(1.6,1.6);
   
 }
 
 #B737, #B757 {
-  position: absolute;
-  top: 30vh;
+  // position: absolute;
+  position: relative;
+  top: 3vh;
   max-width: 70vw;
   width: 70vw;
   height: 50vh;
-  
+  // z-index: 0;
 }
 
 /* ========================================================================================= */
@@ -30,7 +34,7 @@
   font-size: 1rem;
   font-weight: bold;
   text-anchor: middle;
-  alignment-baseline: central;
+  // alignment-baseline: central;
 }
 
 .freeFC_BOM {
@@ -69,7 +73,7 @@
   fill: lightgrey;
 }
 
-/* dziób i obrys */
+/* aircraft bow and contour */
 .bom_st5 {
   clip-path: url(#SVGID_17_);
 }
@@ -79,7 +83,7 @@
   fill: #FFFFFF;
 }
 
-/*pokład tło */
+/*deck background */
 .bom_st8 {
   fill-rule: evenodd;
   clip-rule: evenodd;
@@ -89,7 +93,7 @@
   fill: #E5E5E5;
 }
 
-/* skrzydła */
+/* wings */
 .bom_st11 {
   opacity: 0.85;
 }
@@ -98,7 +102,7 @@
   fill: #333333;
 }
 
-/* kolor wszystkich napisów*/
+/* text color*/
 .bom_st22 {
   clip-path: url(#SVGID_33_);
 }
@@ -1613,7 +1617,7 @@
   fill: #000100;
 }
 
-/*kolor napisów menu*/
+/*text color of menu*/
 .st265 {
   fill: #4067AF;
 }
@@ -1639,7 +1643,7 @@
 
 /*Economy Plus- Boeing757*/
 .btn_economy_757 {
-  /* visibility: hidden; */
+ 
   fill: #b0f074;
   stroke: grey;
   stroke-width: 2;
@@ -1902,12 +1906,12 @@
   fill: #333;
 }
 
-/* zewnętrzny obrys samolotu */
+/* external contour of airplane*/
 .cls-65 {
   fill: #999;
 }
 
-/* wewnętrzny obrys samolotu */
+/* internal contour of airplane */
 .cls-66 {
   clip-path: url(#clip-path-2);
 }
@@ -2148,7 +2152,7 @@
   fill: #8c8c8c;
 }
 
-/*ikonki: lavatory, closet, galley */
+/*icons: lavatory, closet, galley */
 .cls-128 {
   fill: #8c8c8c;
 }
@@ -2161,29 +2165,29 @@
   fill: #666;
 }
 
-/*obrysy siedzeń Business Class*/
+/*seats contour Business Class*/
 .cls-130 {
   fill: #595959;
 }
 
-/*obrysy siedzeń Economy Plus*/
+/*seats contour Economy Plus*/
 .cls-132 {
   fill: #000100;
 }
 
-/*NAPISY POD MENU */
+/*menu labels */
 .cls-135 {
   fill: #e92227;
 }
 
 
-.hidden {
-  visibility: hidden;
+.hidden_plane {
+  display:  none;
 }
 
-.visible {
-  visibility: visible;
-  /* display: block; */
+.visible_plane {
+  // visibility: visible;
+  display:  block;
   z-index: 0;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
@@ -2197,26 +2201,26 @@
 @media screen and (min-width: 376px) and (max-width: 600px) {
         #B737 {
           position: absolute;
-          top: 22vh;
-          right: 95vw;
+          top: 30%;
+          right: 95%;
           width: 100vw;
           height: 50vh;
           transform: rotate(90deg) scale(1.55,2.5);
             }
         #B757 {
           position: absolute;
-          top: 28vh;
-          right: 87vw;
+          top: 35%;
+          right: 87%;
           width: 100vw;
           height: 80vw;
           transform: rotate(90deg) scale(1.5,2.5);
           }
         
         #Bombardier {
-          position: relative;
-          top: -12vh;
-          right: 11vw;
-          transform: rotate(90deg) scale(0.65,1.0);
+          position: absolute;
+          top: 16%;
+          right: 45%;
+          transform: rotate(90deg) scale(0.8,1.28);
         }
    
 }
@@ -2224,17 +2228,17 @@
 /* ========================   max-width: 375px    ============================================ */
 @media screen and (max-width: 375px) {
   #B737 {
-    position: absolute;
-    top: 24vh;
-    right: 95vw;
+    position: relative;
+    top: 3vh;
+    right: 75vw;
     width: 100vw;
     height: 50vh;
     transform: rotate(90deg) scale(1.5,2.4);
       }
   #B757 {
-    position: absolute;
-    top: 28vh;
-    right: 87vw;
+    position: relative;
+    top: 9vh;
+    right: 67vw;
     width: 100vw;
     height: 80vw;
     transform: rotate(90deg) scale(1.5,2.5);
