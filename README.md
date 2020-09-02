@@ -4,12 +4,6 @@
 * [Setup](#setup)
 
 ## General info
-The project includes an airplane ticket booking system with the following options:
-1. Logging in
-2. Choosing the date / destination / number of people
-3. Choosing a seat on the plane
-4. Choice of additional options (luggage, tariff)
-5. Summary of the order
 
 The project includes an air ticket booking system with the following options:
 1. Logging in
